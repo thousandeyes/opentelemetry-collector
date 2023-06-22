@@ -51,6 +51,8 @@ replace go.opentelemetry.io/collector/consumer => ../consumer
 
 replace go.opentelemetry.io/collector/extension => ../extension
 
+replace go.opentelemetry.io/collector/extension/auth => ../extension/auth
+
 replace go.opentelemetry.io/collector/extension/zpagesextension => ../extension/zpagesextension
 
 replace go.opentelemetry.io/collector/featuregate => ../featuregate
@@ -65,4 +67,12 @@ replace go.opentelemetry.io/collector/semconv => ../semconv
 
 replace go.opentelemetry.io/collector/exporter => ../exporter
 
+replace go.opentelemetry.io/collector/config/configcompression => ../config/configcompression
+
 replace go.opentelemetry.io/collector/config/confignet => ../config/confignet
+
+replace go.opentelemetry.io/collector/config/configopaque => ../config/configopaque
+
+replace go.opentelemetry.io/collector/config/configtls => ../config/configtls
+
+replace go.opentelemetry.io/collector/config/configauth => ../config/configauth

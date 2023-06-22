@@ -8,7 +8,6 @@ require (
 	go.opentelemetry.io/collector/component v0.79.0
 	go.opentelemetry.io/collector/config/configauth v0.0.0-00010101000000-000000000000
 	go.opentelemetry.io/collector/config/configcompression v0.0.0-00010101000000-000000000000
-	go.opentelemetry.io/collector/config/configgrpc v0.0.0-00010101000000-000000000000
 	go.opentelemetry.io/collector/config/configopaque v0.0.0-00010101000000-000000000000
 	go.opentelemetry.io/collector/config/configtls v0.0.0-00010101000000-000000000000
 	go.opentelemetry.io/collector/confmap v0.79.0
@@ -21,6 +20,7 @@ require (
 )
 
 require (
+	cloud.google.com/go/compute v1.20.0 // indirect
 	github.com/cenkalti/backoff/v4 v4.2.1 // indirect
 	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/fsnotify/fsnotify v1.6.0 // indirect
@@ -42,7 +42,6 @@ require (
 	go.opencensus.io v0.24.0 // indirect
 	go.opentelemetry.io/collector/config/confignet v0.0.0-00010101000000-000000000000 // indirect
 	go.opentelemetry.io/collector/config/configtelemetry v0.0.0-00010101000000-000000000000 // indirect
-	go.opentelemetry.io/collector/config/internal v0.0.0-00010101000000-000000000000 // indirect
 	go.opentelemetry.io/collector/extension v0.0.0-20230609200026-525adf4a682a // indirect
 	go.opentelemetry.io/collector/extension/auth v0.0.0-20230615165320-df20186ee21c // indirect
 	go.opentelemetry.io/collector/featuregate v1.0.0-rcv0012 // indirect
@@ -70,15 +69,11 @@ replace go.opentelemetry.io/collector/config/configcompression => ../../config/c
 
 replace go.opentelemetry.io/collector/config/configauth => ../../config/configauth
 
-replace go.opentelemetry.io/collector/config/configgrpc => ../../config/configgrpc
-
 replace go.opentelemetry.io/collector/config/confignet => ../../config/confignet
 
 replace go.opentelemetry.io/collector/config/configopaque => ../../config/configopaque
 
 replace go.opentelemetry.io/collector/config/configtls => ../../config/configtls
-
-replace go.opentelemetry.io/collector/config/internal => ../../config/internal
 
 replace go.opentelemetry.io/collector/confmap => ../../confmap
 
@@ -110,6 +105,3 @@ retract (
 replace go.opentelemetry.io/collector/connector => ../../connector
 
 replace go.opentelemetry.io/collector/config/configtelemetry => ../../config/configtelemetry
-
-// ambiguous import: found package cloud.google.com/go/compute/metadata in multiple modules
-replace cloud.google.com/go => cloud.google.com/go v0.110.2

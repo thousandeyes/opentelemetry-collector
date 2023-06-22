@@ -46,6 +46,8 @@ replace go.opentelemetry.io/collector => ../../
 
 replace go.opentelemetry.io/collector/component => ../../component
 
+replace go.opentelemetry.io/collector/config/configcompression => ../../config/configcompression
+
 replace go.opentelemetry.io/collector/config/confignet => ../../config/confignet
 
 replace go.opentelemetry.io/collector/confmap => ../../confmap
@@ -53,6 +55,8 @@ replace go.opentelemetry.io/collector/confmap => ../../confmap
 replace go.opentelemetry.io/collector/exporter => ../../exporter
 
 replace go.opentelemetry.io/collector/extension => ../
+
+replace go.opentelemetry.io/collector/extension/auth => ../auth
 
 replace go.opentelemetry.io/collector/featuregate => ../../featuregate
 
@@ -73,4 +77,10 @@ retract (
 
 replace go.opentelemetry.io/collector/connector => ../../connector
 
+replace go.opentelemetry.io/collector/config/configopaque => ../../config/configopaque
+
+replace go.opentelemetry.io/collector/config/configtls => ../../config/configtls
+
 replace go.opentelemetry.io/collector/config/configtelemetry => ../../config/configtelemetry
+
+replace go.opentelemetry.io/collector/config/configauth => ../../config/configauth
