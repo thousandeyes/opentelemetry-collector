@@ -12,25 +12,48 @@ import (
 	"io"
 	"net/http"
 
+	"github.com/golang/snappy"
+	"github.com/klauspost/compress/zstd"
+
 	"go.opentelemetry.io/collector/config/configcompression"
 )
 
 type compressRoundTripper struct {
-	rt              http.RoundTripper
+	RoundTripper    http.RoundTripper
 	compressionType configcompression.CompressionType
-	compressor      *compressor
+	writer          func(*bytes.Buffer) (io.WriteCloser, error)
 }
 
-func newCompressRoundTripper(rt http.RoundTripper, compressionType configcompression.CompressionType) (*compressRoundTripper, error) {
-	encoder, err := newCompressor(compressionType)
-	if err != nil {
-		return nil, err
-	}
+func newCompressRoundTripper(rt http.RoundTripper, compressionType configcompression.CompressionType) *compressRoundTripper {
 	return &compressRoundTripper{
-		rt:              rt,
+		RoundTripper:    rt,
 		compressionType: compressionType,
-		compressor:      encoder,
-	}, nil
+		writer:          writerFactory(compressionType),
+	}
+}
+
+// writerFactory defines writer field in CompressRoundTripper.
+// The validity of input is already checked when NewCompressRoundTripper was called in confighttp,
+func writerFactory(compressionType configcompression.CompressionType) func(*bytes.Buffer) (io.WriteCloser, error) {
+	switch compressionType {
+	case configcompression.Gzip:
+		return func(buf *bytes.Buffer) (io.WriteCloser, error) {
+			return gzip.NewWriter(buf), nil
+		}
+	case configcompression.Snappy:
+		return func(buf *bytes.Buffer) (io.WriteCloser, error) {
+			return snappy.NewBufferedWriter(buf), nil
+		}
+	case configcompression.Zstd:
+		return func(buf *bytes.Buffer) (io.WriteCloser, error) {
+			return zstd.NewWriter(buf)
+		}
+	case configcompression.Zlib, configcompression.Deflate:
+		return func(buf *bytes.Buffer) (io.WriteCloser, error) {
+			return zlib.NewWriter(buf), nil
+		}
+	}
+	return nil
 }
 
 func (r *compressRoundTripper) RoundTrip(req *http.Request) (*http.Response, error) {
@@ -39,12 +62,29 @@ func (r *compressRoundTripper) RoundTrip(req *http.Request) (*http.Response, err
 		// since we don't want to compress it again. This is a safeguard that normally
 		// should not happen since CompressRoundTripper is not intended to be used
 		// with http clients which already do their own compression.
-		return r.rt.RoundTrip(req)
+		return r.RoundTripper.RoundTrip(req)
 	}
 
 	// Compress the body.
 	buf := bytes.NewBuffer([]byte{})
-	if err := r.compressor.compress(buf, req.Body); err != nil {
+	compressWriter, writerErr := r.writer(buf)
+	if writerErr != nil {
+		return nil, writerErr
+	}
+	if req.Body != nil {
+		_, copyErr := io.Copy(compressWriter, req.Body)
+		closeErr := req.Body.Close()
+
+		if copyErr != nil {
+			return nil, copyErr
+		}
+
+		if closeErr != nil {
+			return nil, closeErr
+		}
+	}
+
+	if err := compressWriter.Close(); err != nil {
 		return nil, err
 	}
 
@@ -55,11 +95,11 @@ func (r *compressRoundTripper) RoundTrip(req *http.Request) (*http.Response, err
 		return nil, err
 	}
 
-	// Clone the headers and add the encoding header.
+	// Clone the headers and add gzip encoding header.
 	cReq.Header = req.Header.Clone()
 	cReq.Header.Add(headerContentEncoding, string(r.compressionType))
 
-	return r.rt.RoundTrip(cReq)
+	return r.RoundTripper.RoundTrip(cReq)
 }
 
 type errorHandler func(w http.ResponseWriter, r *http.Request, errorMsg string, statusCode int)
