@@ -74,5 +74,3 @@ replace go.opentelemetry.io/collector/config/confignet => ../config/confignet
 replace go.opentelemetry.io/collector/config/configopaque => ../config/configopaque
 
 replace go.opentelemetry.io/collector/config/configtls => ../config/configtls
-
-replace go.opentelemetry.io/collector/config/configauth => ../config/configauth
