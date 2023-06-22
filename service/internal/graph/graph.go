@@ -22,7 +22,6 @@ import (
 	"go.opentelemetry.io/collector/receiver"
 	"go.opentelemetry.io/collector/service/internal/capabilityconsumer"
 	"go.opentelemetry.io/collector/service/internal/fanoutconsumer"
-	"go.opentelemetry.io/collector/service/pipelines"
 )
 
 // Settings holds configuration for building builtPipelines.
@@ -36,7 +35,13 @@ type Settings struct {
 	ConnectorBuilder *connector.Builder
 
 	// PipelineConfigs is a map of component.ID to PipelineConfig.
-	PipelineConfigs pipelines.Config
+	PipelineConfigs map[component.ID]*PipelineConfig
+}
+
+type PipelineConfig struct {
+	Receivers  []component.ID
+	Processors []component.ID
+	Exporters  []component.ID
 }
 
 type Graph struct {
