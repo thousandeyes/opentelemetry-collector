@@ -143,10 +143,5 @@ exporters:
 extensions:
    - zpages
    - memory_ballast
-```
 
-## How to validate configuration file and return all errors without running collector
-
-```bash
-   ./otelcorecol validate --config=file:examples/local/otel-config.yaml
 ```
