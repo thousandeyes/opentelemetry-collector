@@ -77,5 +77,3 @@ retract (
 replace go.opentelemetry.io/collector/connector => ../../connector
 
 replace go.opentelemetry.io/collector/config/configopaque => ../../config/configopaque
-
-replace go.opentelemetry.io/collector/config/configtls => ../../config/configtls
