@@ -63,5 +63,3 @@ replace go.opentelemetry.io/collector/semconv => ../../semconv
 replace go.opentelemetry.io/collector/connector => ../../connector
 
 replace go.opentelemetry.io/collector/config/configcompression => ../../config/configcompression
-
-replace go.opentelemetry.io/collector/config/confignet => ../../config/confignet
