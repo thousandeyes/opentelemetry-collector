@@ -238,13 +238,16 @@ func (n *connectorNode) buildComponent(
 
 	switch n.rcvrPipelineType {
 	case component.DataTypeTraces:
-		capability := consumer.Capabilities{MutatesData: false}
-		consumers := make(map[component.ID]consumer.Traces, len(nexts))
-		for _, next := range nexts {
-			consumers[next.(*capabilitiesNode).pipelineID] = next.(consumer.Traces)
-			capability.MutatesData = capability.MutatesData || next.Capabilities().MutatesData
+		next := nexts[0].(consumer.Traces)
+		capability := nexts[0].Capabilities()
+		if len(nexts) > 1 {
+			consumers := make(map[component.ID]consumer.Traces, len(nexts))
+			for _, next := range nexts {
+				consumers[next.(*capabilitiesNode).pipelineID] = next.(consumer.Traces)
+				capability.MutatesData = capability.MutatesData || next.Capabilities().MutatesData
+			}
+			next = fanoutconsumer.NewTracesRouter(consumers)
 		}
-		next := fanoutconsumer.NewTracesRouter(consumers)
 
 		switch n.exprPipelineType {
 		case component.DataTypeTraces:
@@ -271,14 +274,16 @@ func (n *connectorNode) buildComponent(
 		}
 
 	case component.DataTypeMetrics:
-		capability := consumer.Capabilities{MutatesData: false}
-		consumers := make(map[component.ID]consumer.Metrics, len(nexts))
-		for _, next := range nexts {
-			consumers[next.(*capabilitiesNode).pipelineID] = next.(consumer.Metrics)
-			capability.MutatesData = capability.MutatesData || next.Capabilities().MutatesData
+		next := nexts[0].(consumer.Metrics)
+		capability := nexts[0].Capabilities()
+		if len(nexts) > 1 {
+			consumers := make(map[component.ID]consumer.Metrics, len(nexts))
+			for _, next := range nexts {
+				consumers[next.(*capabilitiesNode).pipelineID] = next.(consumer.Metrics)
+				capability.MutatesData = capability.MutatesData || next.Capabilities().MutatesData
+			}
+			next = fanoutconsumer.NewMetricsRouter(consumers)
 		}
-		next := fanoutconsumer.NewMetricsRouter(consumers)
-
 		switch n.exprPipelineType {
 		case component.DataTypeTraces:
 			conn, err := builder.CreateTracesToMetrics(ctx, set, next)
@@ -303,14 +308,16 @@ func (n *connectorNode) buildComponent(
 			n.Component, n.baseConsumer = conn, conn
 		}
 	case component.DataTypeLogs:
-		capability := consumer.Capabilities{MutatesData: false}
-		consumers := make(map[component.ID]consumer.Logs, len(nexts))
-		for _, next := range nexts {
-			consumers[next.(*capabilitiesNode).pipelineID] = next.(consumer.Logs)
-			capability.MutatesData = capability.MutatesData || next.Capabilities().MutatesData
+		next := nexts[0].(consumer.Logs)
+		capability := nexts[0].Capabilities()
+		if len(nexts) > 1 {
+			consumers := make(map[component.ID]consumer.Logs, len(nexts))
+			for _, next := range nexts {
+				consumers[next.(*capabilitiesNode).pipelineID] = next.(consumer.Logs)
+				capability.MutatesData = capability.MutatesData || next.Capabilities().MutatesData
+			}
+			next = fanoutconsumer.NewLogsRouter(consumers)
 		}
-		next := fanoutconsumer.NewLogsRouter(consumers)
-
 		switch n.exprPipelineType {
 		case component.DataTypeTraces:
 			conn, err := builder.CreateTracesToLogs(ctx, set, next)
