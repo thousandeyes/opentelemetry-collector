@@ -21,9 +21,9 @@ type componentsOutput struct {
 	Extensions []component.Type
 }
 
-// newComponentsCommand constructs a new components command using the given CollectorSettings.
-func newComponentsCommand(set CollectorSettings) *cobra.Command {
-	return &cobra.Command{
+// newBuildSubCommand constructs a new cobra.Command sub command using the given CollectorSettings.
+func newBuildSubCommand(set CollectorSettings) *cobra.Command {
+	buildCmd := &cobra.Command{
 		Use:   "components",
 		Short: "Outputs available components in this collector distribution",
 		Args:  cobra.ExactArgs(0),
@@ -54,4 +54,5 @@ func newComponentsCommand(set CollectorSettings) *cobra.Command {
 			return nil
 		},
 	}
+	return buildCmd
 }
