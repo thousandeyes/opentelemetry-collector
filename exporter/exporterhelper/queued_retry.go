@@ -16,11 +16,10 @@ import (
 	"go.uber.org/zap"
 	"go.uber.org/zap/zapcore"
 
+	"github.com/thousandeyes/opentelemetry-collector/exporter/exporterhelper/internal"
 	"go.opentelemetry.io/collector/component"
 	"go.opentelemetry.io/collector/consumer/consumererror"
-	"go.opentelemetry.io/collector/exporter/exporterhelper/internal"
 	"go.opentelemetry.io/collector/extension/experimental/storage"
-	"go.opentelemetry.io/collector/internal/obsreportconfig/obsmetrics"
 )
 
 const defaultQueueSize = 1000
@@ -42,6 +41,8 @@ type QueueSettings struct {
 	// StorageID if not empty, enables the persistent storage and uses the component specified
 	// as a storage extension for the persistent queue
 	StorageID *component.ID `mapstructure:"storage"`
+	// EnableLogging enables/disables logs
+	EnableLogging bool `mapstructure:"enable_logging"`
 }
 
 // NewDefaultQueueSettings returns the default settings for QueueSettings.
@@ -52,7 +53,8 @@ func NewDefaultQueueSettings() QueueSettings {
 		// By default, batches are 8192 spans, for a total of up to 8 million spans in the queue
 		// This can be estimated at 1-4 GB worth of maximum memory usage
 		// This default is probably still too high, and may be adjusted further down in a future release
-		QueueSize: defaultQueueSize,
+		QueueSize:     defaultQueueSize,
+		EnableLogging: true,
 	}
 }
 
@@ -85,8 +87,13 @@ type queuedRetrySender struct {
 
 func newQueuedRetrySender(id component.ID, signal component.DataType, qCfg QueueSettings, rCfg RetrySettings, reqUnmarshaler internal.RequestUnmarshaler, nextSender requestSender, logger *zap.Logger) *queuedRetrySender {
 	retryStopCh := make(chan struct{})
-	sampledLogger := createSampledLogger(logger)
-	traceAttr := attribute.String(obsmetrics.ExporterKey, id.String())
+	var sampledLogger *zap.Logger
+	if qCfg.EnableLogging {
+		sampledLogger = createSampledLogger(logger)
+	} else {
+		sampledLogger = zap.NewNop()
+	}
+	traceAttr := attribute.String(ExporterKey, id.String())
 
 	qrs := &queuedRetrySender{
 		fullName:           id.String(),

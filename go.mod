@@ -1,4 +1,4 @@
-module go.opentelemetry.io/collector
+module github.com/thousandeyes/opentelemetry-collector
 
 go 1.19
 
@@ -12,6 +12,7 @@ require (
 	github.com/spf13/cobra v1.7.0
 	github.com/stretchr/testify v1.8.4
 	go.opencensus.io v0.24.0
+	go.opentelemetry.io/collector v0.80.0
 	go.opentelemetry.io/collector/component v0.80.0
 	go.opentelemetry.io/collector/config/confignet v0.80.0
 	go.opentelemetry.io/collector/config/configtelemetry v0.80.0
