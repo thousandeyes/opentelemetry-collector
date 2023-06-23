@@ -1,4 +1,4 @@
-module github.com/thousandeyes/opentelemetry-collector
+module github.com/thousandeyes/opentelemetry-collector/exporter
 
 go 1.19
 
