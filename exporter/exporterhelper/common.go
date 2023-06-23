@@ -7,11 +7,11 @@ import (
 	"context"
 	"time"
 
-	origexp "github.com/thousandeyes/opentelemetry-collector"
 	"github.com/thousandeyes/opentelemetry-collector/exporter"
 	"github.com/thousandeyes/opentelemetry-collector/exporter/exporterhelper/internal"
 	"go.opentelemetry.io/collector/component"
 	"go.opentelemetry.io/collector/consumer"
+	origexp "go.opentelemetry.io/collector/exporter"
 	"go.opentelemetry.io/collector/obsreport"
 )
 
