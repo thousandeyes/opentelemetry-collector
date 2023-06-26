@@ -5,12 +5,11 @@ go 1.19
 require (
 	github.com/cenkalti/backoff/v4 v4.2.1
 	github.com/stretchr/testify v1.8.4
-	github.com/thousandeyes/opentelemetry-collector v0.0.0-20230623144726-78b25ab398f5
+	github.com/thousandeyes/opentelemetry-collector v0.0.0-20230626145117-43f22ed2ffed
 	go.opencensus.io v0.24.0
 	go.opentelemetry.io/collector v0.80.0
 	go.opentelemetry.io/collector/component v0.80.0
 	go.opentelemetry.io/collector/consumer v0.80.0
-	go.opentelemetry.io/collector/exporter v0.80.0
 	go.opentelemetry.io/collector/extension v0.80.0
 	go.opentelemetry.io/collector/pdata v1.0.0-rcv0013
 	go.opentelemetry.io/otel v1.16.0
