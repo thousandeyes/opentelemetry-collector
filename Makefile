@@ -57,11 +57,12 @@ gotest:
 .PHONY: gobenchmark
 gobenchmark:
 	@$(MAKE) for-all-target TARGET="benchmark"
+	cat `find . -name benchmark.txt` > benchmarks.txt
 
 .PHONY: gotest-with-cover
-gotest-with-cover: $(GOCOVMERGE)
+gotest-with-cover:
 	@$(MAKE) for-all-target TARGET="test-with-cover"
-	$(GOCOVMERGE) $$(find . -name coverage.out) > coverage.txt
+	$(GOCMD) tool covdata textfmt -i=./coverage/unit -o ./coverage.txt
 
 .PHONY: goporto
 goporto: $(PORTO)
@@ -258,6 +259,29 @@ genpdata:
 	$(GOCMD) run pdata/internal/cmd/pdatagen/main.go
 	$(MAKE) fmt
 
+# The source directory for configuration schema.
+OPENTELEMETRY_JSONSCHEMA_SRC_DIR=service/internal/proctelemetry/opentelememetry-configuration
+
+# The SHA matching the current version of the configuration schema to use
+OPENTELEMETRY_JSONSCHEMA_VERSION=main
+
+# Cleanup temporary directory
+genjsonschema-cleanup:
+	rm -Rf ${OPENTELEMETRY_JSONSCHEMA_SRC_DIR}
+
+# Generate structs for configuration from configuration schema
+genjsonschema: genjsonschema-cleanup $(GOJSONSCHEMA)
+	mkdir -p ${OPENTELEMETRY_JSONSCHEMA_SRC_DIR}
+	curl -sSL https://api.github.com/repos/open-telemetry/opentelemetry-configuration/tarball/${OPENTELEMETRY_JSONSCHEMA_VERSION} | tar xz --strip 1 -C ${OPENTELEMETRY_JSONSCHEMA_SRC_DIR}
+	$(GOJSONSCHEMA) \
+		--package telemetry \
+		--tags mapstructure \
+		--output ./service/telemetry/generated_config.go \
+		--schema-package=https://opentelemetry.io/otelconfig/opentelemetry_configuration.json=github.com/open-telemetry/opentelemetry-collector/schema \
+    	${OPENTELEMETRY_JSONSCHEMA_SRC_DIR}/schema/opentelemetry_configuration.json
+	$(MAKE) fmt
+	$(MAKE) genjsonschema-cleanup
+
 # Generate semantic convention constants. Requires a clone of the opentelemetry-specification repo
 gensemconv:
 	@[ "${SPECPATH}" ] || ( echo ">> env var SPECPATH is not set"; exit 1 )
@@ -284,6 +308,8 @@ check-contrib:
 	@$(MAKE) -C $(CONTRIB_PATH) for-all CMD="$(GOCMD) mod edit -replace go.opentelemetry.io/collector/config/configtls=$(CURDIR)/config/configtls"
 	@$(MAKE) -C $(CONTRIB_PATH) for-all CMD="$(GOCMD) mod edit -replace go.opentelemetry.io/collector/config/internal=$(CURDIR)/config/internal"
 	@$(MAKE) -C $(CONTRIB_PATH) for-all CMD="$(GOCMD) mod edit -replace go.opentelemetry.io/collector/confmap=$(CURDIR)/confmap"
+	@$(MAKE) -C $(CONTRIB_PATH) for-all CMD="$(GOCMD) mod edit -replace go.opentelemetry.io/collector/connector=$(CURDIR)/connector"
+	@$(MAKE) -C $(CONTRIB_PATH) for-all CMD="$(GOCMD) mod edit -replace go.opentelemetry.io/collector/connector/forwardconnector=$(CURDIR)/connector/forwardconnector"
 	@$(MAKE) -C $(CONTRIB_PATH) for-all CMD="$(GOCMD) mod edit -replace go.opentelemetry.io/collector/consumer=$(CURDIR)/consumer"
 	@$(MAKE) -C $(CONTRIB_PATH) for-all CMD="$(GOCMD) mod edit -replace go.opentelemetry.io/collector/exporter=$(CURDIR)/exporter"
 	@$(MAKE) -C $(CONTRIB_PATH) for-all CMD="$(GOCMD) mod edit -replace go.opentelemetry.io/collector/exporter/loggingexporter=$(CURDIR)/exporter/loggingexporter"
@@ -322,6 +348,8 @@ restore-contrib:
 	@$(MAKE) -C $(CONTRIB_PATH) for-all CMD="$(GOCMD) mod edit -dropreplace go.opentelemetry.io/collector/config/configtls"
 	@$(MAKE) -C $(CONTRIB_PATH) for-all CMD="$(GOCMD) mod edit -dropreplace go.opentelemetry.io/collector/config/internal"
 	@$(MAKE) -C $(CONTRIB_PATH) for-all CMD="$(GOCMD) mod edit -dropreplace go.opentelemetry.io/collector/confmap"
+	@$(MAKE) -C $(CONTRIB_PATH) for-all CMD="$(GOCMD) mod edit -dropreplace go.opentelemetry.io/collector/connector"
+	@$(MAKE) -C $(CONTRIB_PATH) for-all CMD="$(GOCMD) mod edit -dropreplace go.opentelemetry.io/collector/connector/forwardconnector"
 	@$(MAKE) -C $(CONTRIB_PATH) for-all CMD="$(GOCMD) mod edit -dropreplace go.opentelemetry.io/collector/consumer"
 	@$(MAKE) -C $(CONTRIB_PATH) for-all CMD="$(GOCMD) mod edit -dropreplace go.opentelemetry.io/collector/exporter"
 	@$(MAKE) -C $(CONTRIB_PATH) for-all CMD="$(GOCMD) mod edit -dropreplace go.opentelemetry.io/collector/exporter/loggingexporter"

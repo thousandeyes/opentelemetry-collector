@@ -4,20 +4,19 @@ go 1.19
 
 require (
 	github.com/a8m/envsubst v1.4.2
+	github.com/atombender/go-jsonschema v0.11.0
 	github.com/client9/misspell v0.3.4
 	github.com/golangci/golangci-lint v1.53.3
 	github.com/google/addlicense v1.1.1
 	github.com/jcchavezs/porto v0.4.0
 	github.com/mikefarah/yq/v4 v4.34.1
-	github.com/ory/go-acc v0.2.8
 	github.com/pavius/impi v0.0.3
-	github.com/wadey/gocovmerge v0.0.0-20160331181800-b5bfa59ec0ad
 	go.opentelemetry.io/build-tools/checkdoc v0.8.0
 	go.opentelemetry.io/build-tools/chloggen v0.8.0
 	go.opentelemetry.io/build-tools/crosslink v0.8.0
 	go.opentelemetry.io/build-tools/multimod v0.8.0
 	go.opentelemetry.io/build-tools/semconvgen v0.8.0
-	golang.org/x/exp v0.0.0-20230510235704-dd950f8aeaea
+	golang.org/x/exp v0.0.0-20230522175609-2e198f4a06a1
 	golang.org/x/tools v0.10.0
 	golang.org/x/vuln v0.1.0
 )
@@ -43,7 +42,6 @@ require (
 	github.com/alingse/asasalint v0.0.11 // indirect
 	github.com/ashanbrown/forbidigo v1.5.3 // indirect
 	github.com/ashanbrown/makezero v1.1.1 // indirect
-	github.com/benbjohnson/clock v1.3.0 // indirect
 	github.com/beorn7/perks v1.0.1 // indirect
 	github.com/bkielbasa/cyclop v1.2.1 // indirect
 	github.com/blizzy78/varnamelen v0.8.0 // indirect
@@ -53,7 +51,6 @@ require (
 	github.com/breml/errchkjson v0.3.1 // indirect
 	github.com/butuzov/ireturn v0.2.0 // indirect
 	github.com/butuzov/mirror v1.1.0 // indirect
-	github.com/cespare/xxhash v1.1.0 // indirect
 	github.com/cespare/xxhash/v2 v2.2.0 // indirect
 	github.com/charithe/durationcheck v0.0.10 // indirect
 	github.com/chavacava/garif v0.0.0-20230227094218-b8c73b2037b8 // indirect
@@ -62,7 +59,6 @@ require (
 	github.com/daixiang0/gci v0.10.1 // indirect
 	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/denis-tingaikin/go-header v0.4.3 // indirect
-	github.com/dgraph-io/ristretto v0.0.2 // indirect
 	github.com/dimchansky/utfbom v1.1.1 // indirect
 	github.com/elliotchance/orderedmap v1.5.0 // indirect
 	github.com/emirpasic/gods v1.18.1 // indirect
@@ -101,7 +97,6 @@ require (
 	github.com/golangci/revgrep v0.0.0-20220804021717-745bb2f7c2e6 // indirect
 	github.com/golangci/unconvert v0.0.0-20180507085042-28b1c447d1f4 // indirect
 	github.com/google/go-cmp v0.5.9 // indirect
-	github.com/google/uuid v1.3.0 // indirect
 	github.com/gordonklaus/ineffassign v0.0.0-20230610083614-0e73809eb601 // indirect
 	github.com/gostaticanalysis/analysisutil v0.7.1 // indirect
 	github.com/gostaticanalysis/comment v1.4.2 // indirect
@@ -142,6 +137,7 @@ require (
 	github.com/mbilski/exhaustivestruct v1.2.0 // indirect
 	github.com/mgechev/revive v1.3.2 // indirect
 	github.com/mitchellh/go-homedir v1.1.0 // indirect
+	github.com/mitchellh/go-wordwrap v1.0.1 // indirect
 	github.com/mitchellh/mapstructure v1.5.0 // indirect
 	github.com/moricho/tparallel v0.3.1 // indirect
 	github.com/nakabonne/nestif v0.3.1 // indirect
@@ -150,11 +146,9 @@ require (
 	github.com/nishanths/predeclared v0.2.2 // indirect
 	github.com/nunnatsa/ginkgolinter v0.12.1 // indirect
 	github.com/olekukonko/tablewriter v0.0.5 // indirect
-	github.com/ory/viper v1.7.5 // indirect
-	github.com/pborman/uuid v1.2.0 // indirect
-	github.com/pelletier/go-toml v1.9.5 // indirect
 	github.com/pelletier/go-toml/v2 v2.0.8 // indirect
 	github.com/pjbgf/sha1cd v0.3.0 // indirect
+	github.com/pkg/errors v0.9.1 // indirect
 	github.com/pmezard/go-difflib v1.0.0 // indirect
 	github.com/polyfloyd/go-errorlint v1.4.2 // indirect
 	github.com/prometheus/client_golang v1.16.0 // indirect
@@ -167,6 +161,7 @@ require (
 	github.com/quasilyte/stdinfo v0.0.0-20220114132959-f7386bf02567 // indirect
 	github.com/ryancurrah/gomodguard v1.3.0 // indirect
 	github.com/ryanrolds/sqlclosecheck v0.4.0 // indirect
+	github.com/sanity-io/litter v1.5.5 // indirect
 	github.com/sanposhiho/wastedassign/v2 v2.0.7 // indirect
 	github.com/sashamelentyev/interfacebloat v1.1.0 // indirect
 	github.com/sashamelentyev/usestdlibvars v1.23.0 // indirect
@@ -237,3 +232,6 @@ retract (
 	v0.57.1 // Release failed, use v0.57.2
 	v0.57.0 // Release failed, use v0.57.2
 )
+
+// work around until https://github.com/omissis/go-jsonschema/pull/80 is merged
+replace github.com/atombender/go-jsonschema v0.11.0 => github.com/codeboten/go-jsonschema v0.0.0-20230622190031-76e0cafc4ced
