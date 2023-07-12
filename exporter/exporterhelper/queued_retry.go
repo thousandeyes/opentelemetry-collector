@@ -85,11 +85,11 @@ type queuedRetrySender struct {
 	requestUnmarshaler internal.RequestUnmarshaler
 }
 
-func newQueuedRetrySender(id component.ID, signal component.DataType, qCfg QueueSettings, rCfg RetrySettings, reqUnmarshaler internal.RequestUnmarshaler, nextSender requestSender, logger *zap.Logger) *queuedRetrySender {
+func newQueuedRetrySender(id component.ID, signal component.DataType, qCfg QueueSettings, rCfg RetrySettings, lCfg LoggerSamplerSettings, reqUnmarshaler internal.RequestUnmarshaler, nextSender requestSender, logger *zap.Logger) *queuedRetrySender {
 	retryStopCh := make(chan struct{})
 	var sampledLogger *zap.Logger
 	if qCfg.EnableLogging {
-		sampledLogger = createSampledLogger(logger)
+		sampledLogger = createSampledLogger(logger, lCfg)
 	} else {
 		sampledLogger = zap.NewNop()
 	}
@@ -273,7 +273,26 @@ func NewDefaultRetrySettings() RetrySettings {
 	}
 }
 
-func createSampledLogger(logger *zap.Logger) *zap.Logger {
+// LoggerSamplerSettings defines configuration for Zap Logger sampler.
+type LoggerSamplerSettings struct {
+	// Interval to log
+	Tick time.Duration `mapstructure:"tick"`
+	// Log the first X entries in the interval
+	First int `mapstructure:"first"`
+	// thereafter log X entries within the interval
+	Thereafter int `mapstructure:"thereafter"`
+}
+
+// NewDefaultLoggerSamplerSettings returns the default settings for LoggerSamplerSettings.
+func NewDefaultLoggerSamplerSettings() LoggerSamplerSettings {
+	return LoggerSamplerSettings{
+		Tick:       10 * time.Second,
+		First:      1,
+		Thereafter: 100,
+	}
+}
+
+func createSampledLogger(logger *zap.Logger, lCfg LoggerSamplerSettings) *zap.Logger {
 	if logger.Core().Enabled(zapcore.DebugLevel) {
 		// Debugging is enabled. Don't do any sampling.
 		return logger
@@ -284,9 +303,9 @@ func createSampledLogger(logger *zap.Logger) *zap.Logger {
 	opts := zap.WrapCore(func(core zapcore.Core) zapcore.Core {
 		return zapcore.NewSamplerWithOptions(
 			core,
-			10*time.Second,
-			1,
-			100,
+			lCfg.Tick,
+			lCfg.First,
+			lCfg.Thereafter,
 		)
 	})
 	return logger.WithOptions(opts)
