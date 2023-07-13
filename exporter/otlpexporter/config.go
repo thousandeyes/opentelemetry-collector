@@ -17,8 +17,8 @@ type Config struct {
 	exporterhelper.QueueSettings   `mapstructure:"sending_queue"`
 	exporterhelper.RetrySettings   `mapstructure:"retry_on_failure"`
 
-	configgrpc.GRPCClientSettings        `mapstructure:",squash"`         // squash ensures fields are correctly decoded in embedded struct.
-	exporterhelper.LoggerSamplerSettings `mapstructure:",logger_sampler"` // squash ensures fields are correctly decoded in embedded struct.
+	configgrpc.GRPCClientSettings        `mapstructure:",squash"` // squash ensures fields are correctly decoded in embedded struct.
+	exporterhelper.LoggerSamplerSettings `mapstructure:"logger_sampler"`
 }
 
 var _ component.Config = (*Config)(nil)
