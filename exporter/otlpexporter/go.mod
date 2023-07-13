@@ -4,7 +4,7 @@ go 1.19
 
 require (
 	github.com/stretchr/testify v1.8.4
-	github.com/thousandeyes/opentelemetry-collector/exporter v0.0.0-20230626161133-015b6e961b55
+	github.com/thousandeyes/opentelemetry-collector/exporter v0.0.0-20230713111452-ae920255d05c
 	go.opentelemetry.io/collector v0.80.0
 	go.opentelemetry.io/collector/component v0.80.0
 	go.opentelemetry.io/collector/config/configauth v0.80.0
