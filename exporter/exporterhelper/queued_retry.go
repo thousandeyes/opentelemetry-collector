@@ -289,9 +289,9 @@ func createSampledLogger(logger *zap.Logger) *zap.Logger {
 	opts := zap.WrapCore(func(core zapcore.Core) zapcore.Core {
 		return zapcore.NewSamplerWithOptions(
 			core,
-			lCfg.Tick,
-			lCfg.First,
-			lCfg.Thereafter,
+			10*time.Second,
+			1,
+			100,
 		)
 	})
 	return logger.WithOptions(opts)
