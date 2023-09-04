@@ -1,12 +1,12 @@
 // Copyright The OpenTelemetry Authors
 // SPDX-License-Identifier: Apache-2.0
 
-package consumer // import "go.opentelemetry.io/collector/consumer"
+package consumer // import "github.com/thousandeyes/opentelemetry-collector/consumer"
 
 import (
 	"context"
 
-	"go.opentelemetry.io/collector/pdata/pmetric"
+	"github.com/thousandeyes/opentelemetry-collector/pdata/pmetric"
 )
 
 // Metrics is the new metrics consumer interface that receives pmetric.Metrics, processes it

@@ -4,7 +4,7 @@
 //go:build linux || darwin
 // +build linux darwin
 
-package loggingexporter // import "go.opentelemetry.io/collector/exporter/loggingexporter"
+package loggingexporter // import "github.com/thousandeyes/opentelemetry-collector/exporter/loggingexporter"
 
 import (
 	"errors"

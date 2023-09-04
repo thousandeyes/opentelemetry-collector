@@ -1,4 +1,4 @@
-module go.opentelemetry.io/collector/config/configopaque
+module github.com/thousandeyes/opentelemetry-collector/config/configopaque
 
 go 1.20
 

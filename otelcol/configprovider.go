@@ -1,19 +1,19 @@
 // Copyright The OpenTelemetry Authors
 // SPDX-License-Identifier: Apache-2.0
 
-package otelcol // import "go.opentelemetry.io/collector/otelcol"
+package otelcol // import "github.com/thousandeyes/opentelemetry-collector/otelcol"
 
 import (
 	"context"
 	"fmt"
 
-	"go.opentelemetry.io/collector/confmap"
-	"go.opentelemetry.io/collector/confmap/converter/expandconverter"
-	"go.opentelemetry.io/collector/confmap/provider/envprovider"
-	"go.opentelemetry.io/collector/confmap/provider/fileprovider"
-	"go.opentelemetry.io/collector/confmap/provider/httpprovider"
-	"go.opentelemetry.io/collector/confmap/provider/httpsprovider"
-	"go.opentelemetry.io/collector/confmap/provider/yamlprovider"
+	"github.com/thousandeyes/opentelemetry-collector/confmap"
+	"github.com/thousandeyes/opentelemetry-collector/confmap/converter/expandconverter"
+	"github.com/thousandeyes/opentelemetry-collector/confmap/provider/envprovider"
+	"github.com/thousandeyes/opentelemetry-collector/confmap/provider/fileprovider"
+	"github.com/thousandeyes/opentelemetry-collector/confmap/provider/httpprovider"
+	"github.com/thousandeyes/opentelemetry-collector/confmap/provider/httpsprovider"
+	"github.com/thousandeyes/opentelemetry-collector/confmap/provider/yamlprovider"
 )
 
 // ConfigProvider provides the service configuration.

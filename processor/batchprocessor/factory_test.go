@@ -9,8 +9,8 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"go.opentelemetry.io/collector/component/componenttest"
-	"go.opentelemetry.io/collector/processor/processortest"
+	"github.com/thousandeyes/opentelemetry-collector/component/componenttest"
+	"github.com/thousandeyes/opentelemetry-collector/processor/processortest"
 )
 
 func TestCreateDefaultConfig(t *testing.T) {

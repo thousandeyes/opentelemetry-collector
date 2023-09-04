@@ -1,7 +1,7 @@
 // Copyright The OpenTelemetry Authors
 // SPDX-License-Identifier: Apache-2.0
 
-package fanoutconsumer // import "go.opentelemetry.io/collector/internal/fanoutconsumer"
+package fanoutconsumer // import "github.com/thousandeyes/opentelemetry-collector/internal/fanoutconsumer"
 
 import (
 	"context"
@@ -9,10 +9,10 @@ import (
 
 	"go.uber.org/multierr"
 
-	"go.opentelemetry.io/collector/component"
-	"go.opentelemetry.io/collector/connector"
-	"go.opentelemetry.io/collector/consumer"
-	"go.opentelemetry.io/collector/pdata/pmetric"
+	"github.com/thousandeyes/opentelemetry-collector/component"
+	"github.com/thousandeyes/opentelemetry-collector/connector"
+	"github.com/thousandeyes/opentelemetry-collector/consumer"
+	"github.com/thousandeyes/opentelemetry-collector/pdata/pmetric"
 )
 
 // NewMetrics wraps multiple metrics consumers in a single one.

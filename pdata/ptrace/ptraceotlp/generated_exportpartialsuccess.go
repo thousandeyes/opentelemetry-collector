@@ -7,7 +7,7 @@
 package ptraceotlp
 
 import (
-	otlpcollectortrace "go.opentelemetry.io/collector/pdata/internal/data/protogen/collector/trace/v1"
+	otlpcollectortrace "github.com/thousandeyes/opentelemetry-collector/pdata/internal/data/protogen/collector/trace/v1"
 )
 
 // ExportPartialSuccess represents the details of a partially successful export request.

@@ -14,10 +14,10 @@ import (
 	sdktrace "go.opentelemetry.io/otel/sdk/trace"
 	"go.opentelemetry.io/otel/trace"
 
-	"go.opentelemetry.io/collector/component"
-	"go.opentelemetry.io/collector/component/componenttest"
-	"go.opentelemetry.io/collector/config/confignet"
-	"go.opentelemetry.io/collector/internal/testutil"
+	"github.com/thousandeyes/opentelemetry-collector/component"
+	"github.com/thousandeyes/opentelemetry-collector/component/componenttest"
+	"github.com/thousandeyes/opentelemetry-collector/config/confignet"
+	"github.com/thousandeyes/opentelemetry-collector/internal/testutil"
 )
 
 type zpagesHost struct {

@@ -10,7 +10,7 @@ import (
 	"sync"
 	"sync/atomic"
 
-	"go.opentelemetry.io/collector/component"
+	"github.com/thousandeyes/opentelemetry-collector/component"
 )
 
 // boundedMemoryQueue implements a producer-consumer exchange similar to a ring buffer queue,

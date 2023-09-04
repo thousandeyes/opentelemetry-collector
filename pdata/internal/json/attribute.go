@@ -1,7 +1,7 @@
 // Copyright The OpenTelemetry Authors
 // SPDX-License-Identifier: Apache-2.0
 
-package json // import "go.opentelemetry.io/collector/pdata/internal/json"
+package json // import "github.com/thousandeyes/opentelemetry-collector/pdata/internal/json"
 
 import (
 	"encoding/base64"
@@ -9,7 +9,7 @@ import (
 
 	jsoniter "github.com/json-iterator/go"
 
-	otlpcommon "go.opentelemetry.io/collector/pdata/internal/data/protogen/common/v1"
+	otlpcommon "github.com/thousandeyes/opentelemetry-collector/pdata/internal/data/protogen/common/v1"
 )
 
 // ReadAttribute Unmarshal JSON data and return otlpcommon.KeyValue

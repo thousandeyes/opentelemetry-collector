@@ -1,4 +1,4 @@
-module go.opentelemetry.io/collector/config/configtelemetry
+module github.com/thousandeyes/opentelemetry-collector/config/configtelemetry
 
 go 1.20
 

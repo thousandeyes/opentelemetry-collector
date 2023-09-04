@@ -7,7 +7,7 @@
 package pmetric
 
 import (
-	otlpmetrics "go.opentelemetry.io/collector/pdata/internal/data/protogen/metrics/v1"
+	otlpmetrics "github.com/thousandeyes/opentelemetry-collector/pdata/internal/data/protogen/metrics/v1"
 )
 
 // Metric represents one metric as a collection of datapoints.

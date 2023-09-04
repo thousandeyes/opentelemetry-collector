@@ -8,7 +8,7 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"go.opentelemetry.io/collector/config/configtelemetry"
+	"github.com/thousandeyes/opentelemetry-collector/config/configtelemetry"
 )
 
 func TestConfigure(t *testing.T) {

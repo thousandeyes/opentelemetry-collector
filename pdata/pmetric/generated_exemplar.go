@@ -7,10 +7,10 @@
 package pmetric
 
 import (
-	"go.opentelemetry.io/collector/pdata/internal"
-	"go.opentelemetry.io/collector/pdata/internal/data"
-	otlpmetrics "go.opentelemetry.io/collector/pdata/internal/data/protogen/metrics/v1"
-	"go.opentelemetry.io/collector/pdata/pcommon"
+	"github.com/thousandeyes/opentelemetry-collector/pdata/internal"
+	"github.com/thousandeyes/opentelemetry-collector/pdata/internal/data"
+	otlpmetrics "github.com/thousandeyes/opentelemetry-collector/pdata/internal/data/protogen/metrics/v1"
+	"github.com/thousandeyes/opentelemetry-collector/pdata/pcommon"
 )
 
 // Exemplar is a sample input double measurement.

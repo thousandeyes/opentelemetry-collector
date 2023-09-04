@@ -13,9 +13,9 @@ import (
 	_ "github.com/gogo/protobuf/gogoproto"
 	proto "github.com/gogo/protobuf/proto"
 
-	go_opentelemetry_io_collector_pdata_internal_data "go.opentelemetry.io/collector/pdata/internal/data"
-	v11 "go.opentelemetry.io/collector/pdata/internal/data/protogen/common/v1"
-	v1 "go.opentelemetry.io/collector/pdata/internal/data/protogen/resource/v1"
+	go_opentelemetry_io_collector_pdata_internal_data "github.com/thousandeyes/opentelemetry-collector/pdata/internal/data"
+	v11 "github.com/thousandeyes/opentelemetry-collector/pdata/internal/data/protogen/common/v1"
+	v1 "github.com/thousandeyes/opentelemetry-collector/pdata/internal/data/protogen/resource/v1"
 )
 
 // Reference imports to suppress errors if they are not otherwise used.
@@ -412,7 +412,7 @@ type LogRecord struct {
 	// trace if any of the following is true:
 	//   - the field is not present,
 	//   - the field contains an invalid value.
-	TraceId go_opentelemetry_io_collector_pdata_internal_data.TraceID `protobuf:"bytes,9,opt,name=trace_id,json=traceId,proto3,customtype=go.opentelemetry.io/collector/pdata/internal/data.TraceID" json:"trace_id"`
+	TraceId go_opentelemetry_io_collector_pdata_internal_data.TraceID `protobuf:"bytes,9,opt,name=trace_id,json=traceId,proto3,customtype=github.com/thousandeyes/opentelemetry-collector/pdata/internal/data.TraceID" json:"trace_id"`
 	// A unique identifier for a span within a trace, assigned when the span
 	// is created. The ID is an 8-byte array. An ID with all zeroes OR of length
 	// other than 8 bytes is considered invalid (empty string in OTLP/JSON
@@ -425,7 +425,7 @@ type LogRecord struct {
 	// span if any of the following is true:
 	//   - the field is not present,
 	//   - the field contains an invalid value.
-	SpanId go_opentelemetry_io_collector_pdata_internal_data.SpanID `protobuf:"bytes,10,opt,name=span_id,json=spanId,proto3,customtype=go.opentelemetry.io/collector/pdata/internal/data.SpanID" json:"span_id"`
+	SpanId go_opentelemetry_io_collector_pdata_internal_data.SpanID `protobuf:"bytes,10,opt,name=span_id,json=spanId,proto3,customtype=github.com/thousandeyes/opentelemetry-collector/pdata/internal/data.SpanID" json:"span_id"`
 }
 
 func (m *LogRecord) Reset()         { *m = LogRecord{} }

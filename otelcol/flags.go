@@ -1,14 +1,14 @@
 // Copyright The OpenTelemetry Authors
 // SPDX-License-Identifier: Apache-2.0
 
-package otelcol // import "go.opentelemetry.io/collector/otelcol"
+package otelcol // import "github.com/thousandeyes/opentelemetry-collector/otelcol"
 
 import (
 	"errors"
 	"flag"
 	"strings"
 
-	"go.opentelemetry.io/collector/featuregate"
+	"github.com/thousandeyes/opentelemetry-collector/featuregate"
 )
 
 const (

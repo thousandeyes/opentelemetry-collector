@@ -24,10 +24,10 @@ import (
 	"go.opentelemetry.io/otel/sdk/metric/aggregation"
 	"go.opentelemetry.io/otel/sdk/resource"
 
-	"go.opentelemetry.io/collector/component"
-	"go.opentelemetry.io/collector/obsreport"
-	"go.opentelemetry.io/collector/processor"
-	"go.opentelemetry.io/collector/processor/processortest"
+	"github.com/thousandeyes/opentelemetry-collector/component"
+	"github.com/thousandeyes/opentelemetry-collector/obsreport"
+	"github.com/thousandeyes/opentelemetry-collector/processor"
+	"github.com/thousandeyes/opentelemetry-collector/processor/processortest"
 )
 
 func TestBatchProcessorMetrics(t *testing.T) {

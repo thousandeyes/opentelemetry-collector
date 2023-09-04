@@ -9,7 +9,7 @@ package plog
 import (
 	"sort"
 
-	otlplogs "go.opentelemetry.io/collector/pdata/internal/data/protogen/logs/v1"
+	otlplogs "github.com/thousandeyes/opentelemetry-collector/pdata/internal/data/protogen/logs/v1"
 )
 
 // ResourceLogsSlice logically represents a slice of ResourceLogs.

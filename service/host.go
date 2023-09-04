@@ -1,17 +1,17 @@
 // Copyright The OpenTelemetry Authors
 // SPDX-License-Identifier: Apache-2.0
 
-package service // import "go.opentelemetry.io/collector/service"
+package service // import "github.com/thousandeyes/opentelemetry-collector/service"
 
 import (
-	"go.opentelemetry.io/collector/component"
-	"go.opentelemetry.io/collector/connector"
-	"go.opentelemetry.io/collector/exporter"
-	"go.opentelemetry.io/collector/extension"
-	"go.opentelemetry.io/collector/processor"
-	"go.opentelemetry.io/collector/receiver"
-	"go.opentelemetry.io/collector/service/extensions"
-	"go.opentelemetry.io/collector/service/internal/graph"
+	"github.com/thousandeyes/opentelemetry-collector/component"
+	"github.com/thousandeyes/opentelemetry-collector/connector"
+	"github.com/thousandeyes/opentelemetry-collector/exporter"
+	"github.com/thousandeyes/opentelemetry-collector/extension"
+	"github.com/thousandeyes/opentelemetry-collector/processor"
+	"github.com/thousandeyes/opentelemetry-collector/receiver"
+	"github.com/thousandeyes/opentelemetry-collector/service/extensions"
+	"github.com/thousandeyes/opentelemetry-collector/service/internal/graph"
 )
 
 var _ component.Host = (*serviceHost)(nil)

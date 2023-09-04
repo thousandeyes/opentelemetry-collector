@@ -1,7 +1,7 @@
 // Copyright The OpenTelemetry Authors
 // SPDX-License-Identifier: Apache-2.0
 
-package confighttp // import "go.opentelemetry.io/collector/config/confighttp"
+package confighttp // import "github.com/thousandeyes/opentelemetry-collector/config/confighttp"
 
 import (
 	"crypto/tls"
@@ -16,13 +16,13 @@ import (
 	"go.opentelemetry.io/otel"
 	"golang.org/x/net/http2"
 
-	"go.opentelemetry.io/collector/component"
-	"go.opentelemetry.io/collector/config/configauth"
-	"go.opentelemetry.io/collector/config/configcompression"
-	"go.opentelemetry.io/collector/config/configopaque"
-	"go.opentelemetry.io/collector/config/configtls"
-	"go.opentelemetry.io/collector/config/internal"
-	"go.opentelemetry.io/collector/extension/auth"
+	"github.com/thousandeyes/opentelemetry-collector/component"
+	"github.com/thousandeyes/opentelemetry-collector/config/configauth"
+	"github.com/thousandeyes/opentelemetry-collector/config/configcompression"
+	"github.com/thousandeyes/opentelemetry-collector/config/configopaque"
+	"github.com/thousandeyes/opentelemetry-collector/config/configtls"
+	"github.com/thousandeyes/opentelemetry-collector/config/internal"
+	"github.com/thousandeyes/opentelemetry-collector/extension/auth"
 )
 
 const headerContentEncoding = "Content-Encoding"

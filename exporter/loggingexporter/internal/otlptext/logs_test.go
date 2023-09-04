@@ -13,9 +13,9 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"go.opentelemetry.io/collector/internal/testdata"
-	"go.opentelemetry.io/collector/pdata/pcommon"
-	"go.opentelemetry.io/collector/pdata/plog"
+	"github.com/thousandeyes/opentelemetry-collector/internal/testdata"
+	"github.com/thousandeyes/opentelemetry-collector/pdata/pcommon"
+	"github.com/thousandeyes/opentelemetry-collector/pdata/plog"
 )
 
 func TestLogsText(t *testing.T) {

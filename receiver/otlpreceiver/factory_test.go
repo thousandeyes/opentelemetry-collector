@@ -10,14 +10,14 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"go.opentelemetry.io/collector/component/componenttest"
-	"go.opentelemetry.io/collector/config/configgrpc"
-	"go.opentelemetry.io/collector/config/confighttp"
-	"go.opentelemetry.io/collector/config/confignet"
-	"go.opentelemetry.io/collector/consumer"
-	"go.opentelemetry.io/collector/consumer/consumertest"
-	"go.opentelemetry.io/collector/internal/testutil"
-	"go.opentelemetry.io/collector/receiver/receivertest"
+	"github.com/thousandeyes/opentelemetry-collector/component/componenttest"
+	"github.com/thousandeyes/opentelemetry-collector/config/configgrpc"
+	"github.com/thousandeyes/opentelemetry-collector/config/confighttp"
+	"github.com/thousandeyes/opentelemetry-collector/config/confignet"
+	"github.com/thousandeyes/opentelemetry-collector/consumer"
+	"github.com/thousandeyes/opentelemetry-collector/consumer/consumertest"
+	"github.com/thousandeyes/opentelemetry-collector/internal/testutil"
+	"github.com/thousandeyes/opentelemetry-collector/receiver/receivertest"
 )
 
 func TestCreateDefaultConfig(t *testing.T) {

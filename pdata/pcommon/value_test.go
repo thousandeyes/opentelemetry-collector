@@ -11,7 +11,7 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	otlpcommon "go.opentelemetry.io/collector/pdata/internal/data/protogen/common/v1"
+	otlpcommon "github.com/thousandeyes/opentelemetry-collector/pdata/internal/data/protogen/common/v1"
 )
 
 func TestValue(t *testing.T) {

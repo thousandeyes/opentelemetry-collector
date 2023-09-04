@@ -8,8 +8,8 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"go.opentelemetry.io/collector/internal/testdata"
-	"go.opentelemetry.io/collector/pdata/pmetric"
+	"github.com/thousandeyes/opentelemetry-collector/internal/testdata"
+	"github.com/thousandeyes/opentelemetry-collector/pdata/pmetric"
 )
 
 func TestSplitMetrics_noop(t *testing.T) {

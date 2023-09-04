@@ -11,10 +11,10 @@ import (
 	"github.com/stretchr/testify/require"
 	"go.uber.org/zap/zapcore"
 
-	"go.opentelemetry.io/collector/component"
-	"go.opentelemetry.io/collector/config/configtelemetry"
-	"go.opentelemetry.io/collector/confmap"
-	"go.opentelemetry.io/collector/confmap/confmaptest"
+	"github.com/thousandeyes/opentelemetry-collector/component"
+	"github.com/thousandeyes/opentelemetry-collector/config/configtelemetry"
+	"github.com/thousandeyes/opentelemetry-collector/confmap"
+	"github.com/thousandeyes/opentelemetry-collector/confmap/confmaptest"
 )
 
 func TestUnmarshalDefaultConfig(t *testing.T) {

@@ -1,7 +1,7 @@
 // Copyright The OpenTelemetry Authors
 // SPDX-License-Identifier: Apache-2.0
 
-package otlpreceiver // import "go.opentelemetry.io/collector/receiver/otlpreceiver"
+package otlpreceiver // import "github.com/thousandeyes/opentelemetry-collector/receiver/otlpreceiver"
 
 import (
 	"io"
@@ -12,9 +12,9 @@ import (
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 
-	"go.opentelemetry.io/collector/receiver/otlpreceiver/internal/logs"
-	"go.opentelemetry.io/collector/receiver/otlpreceiver/internal/metrics"
-	"go.opentelemetry.io/collector/receiver/otlpreceiver/internal/trace"
+	"github.com/thousandeyes/opentelemetry-collector/receiver/otlpreceiver/internal/logs"
+	"github.com/thousandeyes/opentelemetry-collector/receiver/otlpreceiver/internal/metrics"
+	"github.com/thousandeyes/opentelemetry-collector/receiver/otlpreceiver/internal/trace"
 )
 
 // Pre-computed status with code=Internal to be used in case of a marshaling error.

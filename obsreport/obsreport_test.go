@@ -13,10 +13,10 @@ import (
 	"go.opentelemetry.io/otel/attribute"
 	"go.opentelemetry.io/otel/codes"
 
-	"go.opentelemetry.io/collector/component"
-	"go.opentelemetry.io/collector/internal/obsreportconfig/obsmetrics"
-	"go.opentelemetry.io/collector/obsreport/obsreporttest"
-	"go.opentelemetry.io/collector/receiver/scrapererror"
+	"github.com/thousandeyes/opentelemetry-collector/component"
+	"github.com/thousandeyes/opentelemetry-collector/internal/obsreportconfig/obsmetrics"
+	"github.com/thousandeyes/opentelemetry-collector/obsreport/obsreporttest"
+	"github.com/thousandeyes/opentelemetry-collector/receiver/scrapererror"
 )
 
 const (

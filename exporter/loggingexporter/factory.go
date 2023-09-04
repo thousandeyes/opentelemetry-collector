@@ -1,7 +1,7 @@
 // Copyright The OpenTelemetry Authors
 // SPDX-License-Identifier: Apache-2.0
 
-package loggingexporter // import "go.opentelemetry.io/collector/exporter/loggingexporter"
+package loggingexporter // import "github.com/thousandeyes/opentelemetry-collector/exporter/loggingexporter"
 
 import (
 	"context"
@@ -11,11 +11,11 @@ import (
 	"go.uber.org/zap"
 	"go.uber.org/zap/zapcore"
 
+	"github.com/thousandeyes/opentelemetry-collector/component"
+	"github.com/thousandeyes/opentelemetry-collector/config/configtelemetry"
+	"github.com/thousandeyes/opentelemetry-collector/consumer"
 	"github.com/thousandeyes/opentelemetry-collector/exporter"
 	"github.com/thousandeyes/opentelemetry-collector/exporter/exporterhelper"
-	"go.opentelemetry.io/collector/component"
-	"go.opentelemetry.io/collector/config/configtelemetry"
-	"go.opentelemetry.io/collector/consumer"
 )
 
 const (

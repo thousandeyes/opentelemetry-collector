@@ -1,10 +1,10 @@
 // Copyright The OpenTelemetry Authors
 // SPDX-License-Identifier: Apache-2.0
 
-package otlp // import "go.opentelemetry.io/collector/pdata/internal/otlp"
+package otlp // import "github.com/thousandeyes/opentelemetry-collector/pdata/internal/otlp"
 
 import (
-	otlpmetrics "go.opentelemetry.io/collector/pdata/internal/data/protogen/metrics/v1"
+	otlpmetrics "github.com/thousandeyes/opentelemetry-collector/pdata/internal/data/protogen/metrics/v1"
 )
 
 // MigrateMetrics implements any translation needed due to deprecation in OTLP metrics protocol.

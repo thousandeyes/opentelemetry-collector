@@ -11,7 +11,7 @@ import (
 
 	"go.uber.org/zap"
 
-	"go.opentelemetry.io/collector/extension/experimental/storage"
+	"github.com/thousandeyes/opentelemetry-collector/extension/experimental/storage"
 )
 
 var errItemIndexArrInvalidDataType = errors.New("invalid data type, expected []itemIndex")

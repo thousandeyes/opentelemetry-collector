@@ -15,7 +15,7 @@ import (
 	"github.com/stretchr/testify/require"
 	"golang.org/x/sys/windows/svc"
 
-	"go.opentelemetry.io/collector/component"
+	"github.com/thousandeyes/opentelemetry-collector/component"
 )
 
 func TestNewSvcHandler(t *testing.T) {

@@ -1,15 +1,15 @@
 // Copyright The OpenTelemetry Authors
 // SPDX-License-Identifier: Apache-2.0
 
-package otelcol // import "go.opentelemetry.io/collector/otelcol"
+package otelcol // import "github.com/thousandeyes/opentelemetry-collector/otelcol"
 
 import (
-	"go.opentelemetry.io/collector/component"
-	"go.opentelemetry.io/collector/connector"
-	"go.opentelemetry.io/collector/exporter"
-	"go.opentelemetry.io/collector/extension"
-	"go.opentelemetry.io/collector/processor"
-	"go.opentelemetry.io/collector/receiver"
+	"github.com/thousandeyes/opentelemetry-collector/component"
+	"github.com/thousandeyes/opentelemetry-collector/connector"
+	"github.com/thousandeyes/opentelemetry-collector/exporter"
+	"github.com/thousandeyes/opentelemetry-collector/extension"
+	"github.com/thousandeyes/opentelemetry-collector/processor"
+	"github.com/thousandeyes/opentelemetry-collector/receiver"
 )
 
 // Factories struct holds in a single type all component factories that

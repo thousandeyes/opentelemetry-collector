@@ -9,7 +9,7 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"go.opentelemetry.io/collector/component/componenttest"
+	"github.com/thousandeyes/opentelemetry-collector/component/componenttest"
 )
 
 func TestExampleConnector(t *testing.T) {

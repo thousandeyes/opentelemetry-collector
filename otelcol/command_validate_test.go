@@ -9,10 +9,10 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"go.opentelemetry.io/collector/confmap"
-	"go.opentelemetry.io/collector/confmap/converter/expandconverter"
-	"go.opentelemetry.io/collector/confmap/provider/fileprovider"
-	"go.opentelemetry.io/collector/featuregate"
+	"github.com/thousandeyes/opentelemetry-collector/confmap"
+	"github.com/thousandeyes/opentelemetry-collector/confmap/converter/expandconverter"
+	"github.com/thousandeyes/opentelemetry-collector/confmap/provider/fileprovider"
+	"github.com/thousandeyes/opentelemetry-collector/featuregate"
 )
 
 func TestValidateSubCommandNoConfig(t *testing.T) {

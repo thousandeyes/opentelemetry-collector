@@ -5,42 +5,42 @@ module-sets:
   stable:
     version: v1.0.0-rcv0014
     modules:
-      - go.opentelemetry.io/collector/featuregate
-      - go.opentelemetry.io/collector/pdata
+      - github.com/thousandeyes/opentelemetry-collector/featuregate
+      - github.com/thousandeyes/opentelemetry-collector/pdata
   beta:
-    version: v0.84.0
+    version: v0.0.0-20230904160414-bb0c230d9653
     modules:
-      - go.opentelemetry.io/collector
-      - go.opentelemetry.io/collector/cmd/builder
-      - go.opentelemetry.io/collector/component
-      - go.opentelemetry.io/collector/confmap
-      - go.opentelemetry.io/collector/config/configauth
-      - go.opentelemetry.io/collector/config/configcompression
-      - go.opentelemetry.io/collector/config/configgrpc
-      - go.opentelemetry.io/collector/config/confighttp
-      - go.opentelemetry.io/collector/config/confignet
-      - go.opentelemetry.io/collector/config/configopaque
-      - go.opentelemetry.io/collector/config/configtelemetry
-      - go.opentelemetry.io/collector/config/configtls
-      - go.opentelemetry.io/collector/config/internal
-      - go.opentelemetry.io/collector/connector
-      - go.opentelemetry.io/collector/connector/forwardconnector
-      - go.opentelemetry.io/collector/consumer
-      - go.opentelemetry.io/collector/exporter
-      - go.opentelemetry.io/collector/exporter/loggingexporter
-      - go.opentelemetry.io/collector/exporter/otlpexporter
-      - go.opentelemetry.io/collector/exporter/otlphttpexporter
-      - go.opentelemetry.io/collector/extension
-      - go.opentelemetry.io/collector/extension/auth
-      - go.opentelemetry.io/collector/extension/ballastextension
-      - go.opentelemetry.io/collector/extension/zpagesextension
-      - go.opentelemetry.io/collector/processor
-      - go.opentelemetry.io/collector/processor/batchprocessor
-      - go.opentelemetry.io/collector/processor/memorylimiterprocessor
-      - go.opentelemetry.io/collector/receiver
-      - go.opentelemetry.io/collector/receiver/otlpreceiver
-      - go.opentelemetry.io/collector/semconv
+      - github.com/thousandeyes/opentelemetry-collector
+      - github.com/thousandeyes/opentelemetry-collector/cmd/builder
+      - github.com/thousandeyes/opentelemetry-collector/component
+      - github.com/thousandeyes/opentelemetry-collector/confmap
+      - github.com/thousandeyes/opentelemetry-collector/config/configauth
+      - github.com/thousandeyes/opentelemetry-collector/config/configcompression
+      - github.com/thousandeyes/opentelemetry-collector/config/configgrpc
+      - github.com/thousandeyes/opentelemetry-collector/config/confighttp
+      - github.com/thousandeyes/opentelemetry-collector/config/confignet
+      - github.com/thousandeyes/opentelemetry-collector/config/configopaque
+      - github.com/thousandeyes/opentelemetry-collector/config/configtelemetry
+      - github.com/thousandeyes/opentelemetry-collector/config/configtls
+      - github.com/thousandeyes/opentelemetry-collector/config/internal
+      - github.com/thousandeyes/opentelemetry-collector/connector
+      - github.com/thousandeyes/opentelemetry-collector/connector/forwardconnector
+      - github.com/thousandeyes/opentelemetry-collector/consumer
+      - github.com/thousandeyes/opentelemetry-collector/exporter
+      - github.com/thousandeyes/opentelemetry-collector/exporter/loggingexporter
+      - github.com/thousandeyes/opentelemetry-collector/exporter/otlpexporter
+      - github.com/thousandeyes/opentelemetry-collector/exporter/otlphttpexporter
+      - github.com/thousandeyes/opentelemetry-collector/extension
+      - github.com/thousandeyes/opentelemetry-collector/extension/auth
+      - github.com/thousandeyes/opentelemetry-collector/extension/ballastextension
+      - github.com/thousandeyes/opentelemetry-collector/extension/zpagesextension
+      - github.com/thousandeyes/opentelemetry-collector/processor
+      - github.com/thousandeyes/opentelemetry-collector/processor/batchprocessor
+      - github.com/thousandeyes/opentelemetry-collector/processor/memorylimiterprocessor
+      - github.com/thousandeyes/opentelemetry-collector/receiver
+      - github.com/thousandeyes/opentelemetry-collector/receiver/otlpreceiver
+      - github.com/thousandeyes/opentelemetry-collector/semconv
 
 excluded-modules:
-  - go.opentelemetry.io/collector/cmd/otelcorecol
-  - go.opentelemetry.io/collector/internal/tools
+  - github.com/thousandeyes/opentelemetry-collector/cmd/otelcorecol
+  - github.com/thousandeyes/opentelemetry-collector/internal/tools

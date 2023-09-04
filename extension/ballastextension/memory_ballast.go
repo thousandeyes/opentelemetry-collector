@@ -1,14 +1,14 @@
 // Copyright The OpenTelemetry Authors
 // SPDX-License-Identifier: Apache-2.0
 
-package ballastextension // import "go.opentelemetry.io/collector/extension/ballastextension"
+package ballastextension // import "github.com/thousandeyes/opentelemetry-collector/extension/ballastextension"
 
 import (
 	"context"
 
 	"go.uber.org/zap"
 
-	"go.opentelemetry.io/collector/component"
+	"github.com/thousandeyes/opentelemetry-collector/component"
 )
 
 const megaBytes = 1024 * 1024

@@ -1,7 +1,7 @@
 // Copyright The OpenTelemetry Authors
 // SPDX-License-Identifier: Apache-2.0
 
-package memorylimiterprocessor // import "go.opentelemetry.io/collector/processor/memorylimiterprocessor"
+package memorylimiterprocessor // import "github.com/thousandeyes/opentelemetry-collector/processor/memorylimiterprocessor"
 
 import (
 	"context"
@@ -14,13 +14,13 @@ import (
 
 	"go.uber.org/zap"
 
-	"go.opentelemetry.io/collector/component"
-	"go.opentelemetry.io/collector/internal/iruntime"
-	"go.opentelemetry.io/collector/obsreport"
-	"go.opentelemetry.io/collector/pdata/plog"
-	"go.opentelemetry.io/collector/pdata/pmetric"
-	"go.opentelemetry.io/collector/pdata/ptrace"
-	"go.opentelemetry.io/collector/processor"
+	"github.com/thousandeyes/opentelemetry-collector/component"
+	"github.com/thousandeyes/opentelemetry-collector/internal/iruntime"
+	"github.com/thousandeyes/opentelemetry-collector/obsreport"
+	"github.com/thousandeyes/opentelemetry-collector/pdata/plog"
+	"github.com/thousandeyes/opentelemetry-collector/pdata/pmetric"
+	"github.com/thousandeyes/opentelemetry-collector/pdata/ptrace"
+	"github.com/thousandeyes/opentelemetry-collector/processor"
 )
 
 const (

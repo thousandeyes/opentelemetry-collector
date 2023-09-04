@@ -1,22 +1,22 @@
 dist:
-  module: go.opentelemetry.io/collector/cmd/otelcorecol
+  module: github.com/thousandeyes/opentelemetry-collector/cmd/otelcorecol
   name: otelcorecol
   description: Local OpenTelemetry Collector binary, testing only.
   version: 0.84.0-dev
   otelcol_version: 0.84.0
 
 receivers:
-  - gomod: go.opentelemetry.io/collector/receiver/otlpreceiver v0.84.0
+  - gomod: github.com/thousandeyes/opentelemetry-collector/receiver/otlpreceiver v0.0.0-20230904160414-bb0c230d9653
 exporters:
-  - gomod: go.opentelemetry.io/collector/exporter/loggingexporter v0.84.0
-  - gomod: go.opentelemetry.io/collector/exporter/otlpexporter v0.84.0
-  - gomod: go.opentelemetry.io/collector/exporter/otlphttpexporter v0.84.0
+  - gomod: github.com/thousandeyes/opentelemetry-collector/exporter/loggingexporter v0.0.0-20230904160414-bb0c230d9653
+  - gomod: github.com/thousandeyes/opentelemetry-collector/exporter/otlpexporter v0.0.0-20230904160414-bb0c230d9653
+  - gomod: github.com/thousandeyes/opentelemetry-collector/exporter/otlphttpexporter v0.0.0-20230904160414-bb0c230d9653
 extensions:
-  - gomod: go.opentelemetry.io/collector/extension/ballastextension v0.84.0
-  - gomod: go.opentelemetry.io/collector/extension/zpagesextension v0.84.0
+  - gomod: github.com/thousandeyes/opentelemetry-collector/extension/ballastextension v0.0.0-20230904160414-bb0c230d9653
+  - gomod: github.com/thousandeyes/opentelemetry-collector/extension/zpagesextension v0.0.0-20230904160414-bb0c230d9653
 processors:
-  - gomod: go.opentelemetry.io/collector/processor/batchprocessor v0.84.0
-  - gomod: go.opentelemetry.io/collector/processor/memorylimiterprocessor v0.84.0
+  - gomod: github.com/thousandeyes/opentelemetry-collector/processor/batchprocessor v0.0.0-20230904160414-bb0c230d9653
+  - gomod: github.com/thousandeyes/opentelemetry-collector/processor/memorylimiterprocessor v0.0.0-20230904160414-bb0c230d9653
 connectors:
-  - gomod: go.opentelemetry.io/collector/connector/forwardconnector v0.84.0
+  - gomod: github.com/thousandeyes/opentelemetry-collector/connector/forwardconnector v0.0.0-20230904160414-bb0c230d9653
 

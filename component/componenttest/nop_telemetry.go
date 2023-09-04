@@ -1,16 +1,16 @@
 // Copyright The OpenTelemetry Authors
 // SPDX-License-Identifier: Apache-2.0
 
-package componenttest // import "go.opentelemetry.io/collector/component/componenttest"
+package componenttest // import "github.com/thousandeyes/opentelemetry-collector/component/componenttest"
 
 import (
 	"go.opentelemetry.io/otel/metric/noop"
 	"go.opentelemetry.io/otel/trace"
 	"go.uber.org/zap"
 
-	"go.opentelemetry.io/collector/component"
-	"go.opentelemetry.io/collector/config/configtelemetry"
-	"go.opentelemetry.io/collector/pdata/pcommon"
+	"github.com/thousandeyes/opentelemetry-collector/component"
+	"github.com/thousandeyes/opentelemetry-collector/config/configtelemetry"
+	"github.com/thousandeyes/opentelemetry-collector/pdata/pcommon"
 )
 
 // NewNopTelemetrySettings returns a new nop telemetry settings for Create* functions.

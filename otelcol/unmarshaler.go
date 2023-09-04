@@ -1,21 +1,21 @@
 // Copyright The OpenTelemetry Authors
 // SPDX-License-Identifier: Apache-2.0
 
-package otelcol // import "go.opentelemetry.io/collector/otelcol"
+package otelcol // import "github.com/thousandeyes/opentelemetry-collector/otelcol"
 
 import (
 	"go.uber.org/zap/zapcore"
 
-	"go.opentelemetry.io/collector/config/configtelemetry"
-	"go.opentelemetry.io/collector/confmap"
-	"go.opentelemetry.io/collector/connector"
-	"go.opentelemetry.io/collector/exporter"
-	"go.opentelemetry.io/collector/extension"
-	"go.opentelemetry.io/collector/otelcol/internal/configunmarshaler"
-	"go.opentelemetry.io/collector/processor"
-	"go.opentelemetry.io/collector/receiver"
-	"go.opentelemetry.io/collector/service"
-	"go.opentelemetry.io/collector/service/telemetry"
+	"github.com/thousandeyes/opentelemetry-collector/config/configtelemetry"
+	"github.com/thousandeyes/opentelemetry-collector/confmap"
+	"github.com/thousandeyes/opentelemetry-collector/connector"
+	"github.com/thousandeyes/opentelemetry-collector/exporter"
+	"github.com/thousandeyes/opentelemetry-collector/extension"
+	"github.com/thousandeyes/opentelemetry-collector/otelcol/internal/configunmarshaler"
+	"github.com/thousandeyes/opentelemetry-collector/processor"
+	"github.com/thousandeyes/opentelemetry-collector/receiver"
+	"github.com/thousandeyes/opentelemetry-collector/service"
+	"github.com/thousandeyes/opentelemetry-collector/service/telemetry"
 )
 
 type configSettings struct {

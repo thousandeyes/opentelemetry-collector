@@ -1,7 +1,7 @@
 // Copyright The OpenTelemetry Authors
 // SPDX-License-Identifier: Apache-2.0
 
-package telemetry // import "go.opentelemetry.io/collector/service/telemetry"
+package telemetry // import "github.com/thousandeyes/opentelemetry-collector/service/telemetry"
 
 import (
 	"fmt"
@@ -9,9 +9,9 @@ import (
 
 	"go.uber.org/zap/zapcore"
 
-	"go.opentelemetry.io/collector/config/configtelemetry"
-	"go.opentelemetry.io/collector/confmap"
-	"go.opentelemetry.io/collector/internal/obsreportconfig"
+	"github.com/thousandeyes/opentelemetry-collector/config/configtelemetry"
+	"github.com/thousandeyes/opentelemetry-collector/confmap"
+	"github.com/thousandeyes/opentelemetry-collector/internal/obsreportconfig"
 )
 
 // Config defines the configurable settings for service telemetry.

@@ -9,7 +9,7 @@ package ptrace
 import (
 	"sort"
 
-	otlptrace "go.opentelemetry.io/collector/pdata/internal/data/protogen/trace/v1"
+	otlptrace "github.com/thousandeyes/opentelemetry-collector/pdata/internal/data/protogen/trace/v1"
 )
 
 // SpanLinkSlice logically represents a slice of SpanLink.

@@ -1,7 +1,7 @@
 // Copyright The OpenTelemetry Authors
 // SPDX-License-Identifier: Apache-2.0
 
-package obsreporttest // import "go.opentelemetry.io/collector/obsreport/obsreporttest"
+package obsreporttest // import "github.com/thousandeyes/opentelemetry-collector/obsreport/obsreporttest"
 
 import (
 	"context"
@@ -16,16 +16,16 @@ import (
 	"go.opentelemetry.io/otel/sdk/trace/tracetest"
 	"go.uber.org/multierr"
 
-	"go.opentelemetry.io/collector/component"
-	"go.opentelemetry.io/collector/component/componenttest"
-	"go.opentelemetry.io/collector/config/configtelemetry"
-	"go.opentelemetry.io/collector/exporter"
-	"go.opentelemetry.io/collector/exporter/exportertest"
-	"go.opentelemetry.io/collector/internal/obsreportconfig"
-	"go.opentelemetry.io/collector/processor"
-	"go.opentelemetry.io/collector/processor/processortest"
-	"go.opentelemetry.io/collector/receiver"
-	"go.opentelemetry.io/collector/receiver/receivertest"
+	"github.com/thousandeyes/opentelemetry-collector/component"
+	"github.com/thousandeyes/opentelemetry-collector/component/componenttest"
+	"github.com/thousandeyes/opentelemetry-collector/config/configtelemetry"
+	"github.com/thousandeyes/opentelemetry-collector/exporter"
+	"github.com/thousandeyes/opentelemetry-collector/exporter/exportertest"
+	"github.com/thousandeyes/opentelemetry-collector/internal/obsreportconfig"
+	"github.com/thousandeyes/opentelemetry-collector/processor"
+	"github.com/thousandeyes/opentelemetry-collector/processor/processortest"
+	"github.com/thousandeyes/opentelemetry-collector/receiver"
+	"github.com/thousandeyes/opentelemetry-collector/receiver/receivertest"
 )
 
 const (

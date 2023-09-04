@@ -10,7 +10,7 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"go.opentelemetry.io/collector/pdata/plog"
+	"github.com/thousandeyes/opentelemetry-collector/pdata/plog"
 )
 
 func TestDefaultLogs(t *testing.T) {

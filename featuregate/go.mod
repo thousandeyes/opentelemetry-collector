@@ -1,4 +1,4 @@
-module go.opentelemetry.io/collector/featuregate
+module github.com/thousandeyes/opentelemetry-collector/featuregate
 
 go 1.20
 

@@ -11,11 +11,11 @@ import (
 	goproto "google.golang.org/protobuf/proto"
 	"google.golang.org/protobuf/types/known/emptypb"
 
-	otlpcollectormetrics "go.opentelemetry.io/collector/pdata/internal/data/protogen/collector/metrics/v1"
-	otlpcommon "go.opentelemetry.io/collector/pdata/internal/data/protogen/common/v1"
-	otlpmetrics "go.opentelemetry.io/collector/pdata/internal/data/protogen/metrics/v1"
-	otlpresource "go.opentelemetry.io/collector/pdata/internal/data/protogen/resource/v1"
-	"go.opentelemetry.io/collector/pdata/pcommon"
+	otlpcollectormetrics "github.com/thousandeyes/opentelemetry-collector/pdata/internal/data/protogen/collector/metrics/v1"
+	otlpcommon "github.com/thousandeyes/opentelemetry-collector/pdata/internal/data/protogen/common/v1"
+	otlpmetrics "github.com/thousandeyes/opentelemetry-collector/pdata/internal/data/protogen/metrics/v1"
+	otlpresource "github.com/thousandeyes/opentelemetry-collector/pdata/internal/data/protogen/resource/v1"
+	"github.com/thousandeyes/opentelemetry-collector/pdata/pcommon"
 )
 
 const (

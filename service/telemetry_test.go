@@ -18,12 +18,12 @@ import (
 	"go.opentelemetry.io/otel/metric"
 	"go.uber.org/zap"
 
-	"go.opentelemetry.io/collector/component"
-	"go.opentelemetry.io/collector/config/configtelemetry"
-	"go.opentelemetry.io/collector/internal/testutil"
-	semconv "go.opentelemetry.io/collector/semconv/v1.18.0"
-	"go.opentelemetry.io/collector/service/internal/proctelemetry"
-	"go.opentelemetry.io/collector/service/telemetry"
+	"github.com/thousandeyes/opentelemetry-collector/component"
+	"github.com/thousandeyes/opentelemetry-collector/config/configtelemetry"
+	"github.com/thousandeyes/opentelemetry-collector/internal/testutil"
+	semconv "github.com/thousandeyes/opentelemetry-collector/semconv/v1.18.0"
+	"github.com/thousandeyes/opentelemetry-collector/service/internal/proctelemetry"
+	"github.com/thousandeyes/opentelemetry-collector/service/telemetry"
 )
 
 const (

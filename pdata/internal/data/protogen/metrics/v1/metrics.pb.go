@@ -13,9 +13,9 @@ import (
 	_ "github.com/gogo/protobuf/gogoproto"
 	proto "github.com/gogo/protobuf/proto"
 
-	go_opentelemetry_io_collector_pdata_internal_data "go.opentelemetry.io/collector/pdata/internal/data"
-	v11 "go.opentelemetry.io/collector/pdata/internal/data/protogen/common/v1"
-	v1 "go.opentelemetry.io/collector/pdata/internal/data/protogen/resource/v1"
+	go_opentelemetry_io_collector_pdata_internal_data "github.com/thousandeyes/opentelemetry-collector/pdata/internal/data"
+	v11 "github.com/thousandeyes/opentelemetry-collector/pdata/internal/data/protogen/common/v1"
+	v1 "github.com/thousandeyes/opentelemetry-collector/pdata/internal/data/protogen/resource/v1"
 )
 
 // Reference imports to suppress errors if they are not otherwise used.
@@ -1832,11 +1832,11 @@ type Exemplar struct {
 	// (Optional) Span ID of the exemplar trace.
 	// span_id may be missing if the measurement is not recorded inside a trace
 	// or if the trace is not sampled.
-	SpanId go_opentelemetry_io_collector_pdata_internal_data.SpanID `protobuf:"bytes,4,opt,name=span_id,json=spanId,proto3,customtype=go.opentelemetry.io/collector/pdata/internal/data.SpanID" json:"span_id"`
+	SpanId go_opentelemetry_io_collector_pdata_internal_data.SpanID `protobuf:"bytes,4,opt,name=span_id,json=spanId,proto3,customtype=github.com/thousandeyes/opentelemetry-collector/pdata/internal/data.SpanID" json:"span_id"`
 	// (Optional) Trace ID of the exemplar trace.
 	// trace_id may be missing if the measurement is not recorded inside a trace
 	// or if the trace is not sampled.
-	TraceId go_opentelemetry_io_collector_pdata_internal_data.TraceID `protobuf:"bytes,5,opt,name=trace_id,json=traceId,proto3,customtype=go.opentelemetry.io/collector/pdata/internal/data.TraceID" json:"trace_id"`
+	TraceId go_opentelemetry_io_collector_pdata_internal_data.TraceID `protobuf:"bytes,5,opt,name=trace_id,json=traceId,proto3,customtype=github.com/thousandeyes/opentelemetry-collector/pdata/internal/data.TraceID" json:"trace_id"`
 }
 
 func (m *Exemplar) Reset()         { *m = Exemplar{} }

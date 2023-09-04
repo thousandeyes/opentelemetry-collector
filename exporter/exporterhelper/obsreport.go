@@ -10,8 +10,8 @@ import (
 	"go.opencensus.io/metric/metricdata"
 	"go.opencensus.io/metric/metricproducer"
 
-	"go.opentelemetry.io/collector/internal/obsreportconfig/obsmetrics"
-	"go.opentelemetry.io/collector/obsreport"
+	"github.com/thousandeyes/opentelemetry-collector/internal/obsreportconfig/obsmetrics"
+	"github.com/thousandeyes/opentelemetry-collector/obsreport"
 )
 
 // TODO: Incorporate this functionality along with tests from obsreport_test.go

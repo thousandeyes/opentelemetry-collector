@@ -10,7 +10,7 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"go.opentelemetry.io/collector/internal/testdata"
+	"github.com/thousandeyes/opentelemetry-collector/internal/testdata"
 )
 
 func TestTraces(t *testing.T) {

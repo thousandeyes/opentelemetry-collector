@@ -9,7 +9,7 @@ import (
 
 	"go.uber.org/zap"
 
-	"go.opentelemetry.io/collector/component/componenttest"
+	"github.com/thousandeyes/opentelemetry-collector/component/componenttest"
 )
 
 func Test_newHostWrapper(_ *testing.T) {

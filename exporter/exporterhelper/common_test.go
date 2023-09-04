@@ -12,10 +12,10 @@ import (
 	"go.opentelemetry.io/otel/codes"
 	sdktrace "go.opentelemetry.io/otel/sdk/trace"
 
+	"github.com/thousandeyes/opentelemetry-collector/component"
+	"github.com/thousandeyes/opentelemetry-collector/component/componenttest"
 	"github.com/thousandeyes/opentelemetry-collector/exporter"
-	"go.opentelemetry.io/collector/component"
-	"go.opentelemetry.io/collector/component/componenttest"
-	"go.opentelemetry.io/collector/exporter/exportertest"
+	"github.com/thousandeyes/opentelemetry-collector/exporter/exportertest"
 )
 
 var (

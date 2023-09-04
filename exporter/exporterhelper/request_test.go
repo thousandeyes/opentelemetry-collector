@@ -6,9 +6,9 @@ package exporterhelper
 import (
 	"context"
 
-	"go.opentelemetry.io/collector/pdata/plog"
-	"go.opentelemetry.io/collector/pdata/pmetric"
-	"go.opentelemetry.io/collector/pdata/ptrace"
+	"github.com/thousandeyes/opentelemetry-collector/pdata/plog"
+	"github.com/thousandeyes/opentelemetry-collector/pdata/pmetric"
+	"github.com/thousandeyes/opentelemetry-collector/pdata/ptrace"
 )
 
 type fakeRequest struct {

@@ -1,7 +1,7 @@
 // Copyright The OpenTelemetry Authors
 // SPDX-License-Identifier: Apache-2.0
 
-package envprovider // import "go.opentelemetry.io/collector/confmap/provider/envprovider"
+package envprovider // import "github.com/thousandeyes/opentelemetry-collector/confmap/provider/envprovider"
 
 import (
 	"context"
@@ -9,8 +9,8 @@ import (
 	"os"
 	"strings"
 
-	"go.opentelemetry.io/collector/confmap"
-	"go.opentelemetry.io/collector/confmap/provider/internal"
+	"github.com/thousandeyes/opentelemetry-collector/confmap"
+	"github.com/thousandeyes/opentelemetry-collector/confmap/provider/internal"
 )
 
 const schemeName = "env"

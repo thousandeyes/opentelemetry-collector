@@ -9,11 +9,11 @@ import (
 	"sync/atomic"
 	"testing"
 
-	"go.opentelemetry.io/collector/component"
-	"go.opentelemetry.io/collector/consumer"
-	"go.opentelemetry.io/collector/consumer/consumererror"
-	"go.opentelemetry.io/collector/pdata/plog"
-	"go.opentelemetry.io/collector/receiver"
+	"github.com/thousandeyes/opentelemetry-collector/component"
+	"github.com/thousandeyes/opentelemetry-collector/consumer"
+	"github.com/thousandeyes/opentelemetry-collector/consumer/consumererror"
+	"github.com/thousandeyes/opentelemetry-collector/pdata/plog"
+	"github.com/thousandeyes/opentelemetry-collector/receiver"
 )
 
 // This file is an example that demonstrates how to use the CheckConsumeContract() function.

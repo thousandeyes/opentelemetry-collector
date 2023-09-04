@@ -102,4 +102,4 @@
 // different pipelines, eg.:
 //
 // `processor/batch/batch_size_trigger_send{processor="batch/dev",...}`
-package obsreport // import "go.opentelemetry.io/collector/obsreport"
+package obsreport // import "github.com/thousandeyes/opentelemetry-collector/obsreport"

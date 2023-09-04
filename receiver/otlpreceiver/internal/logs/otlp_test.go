@@ -14,13 +14,13 @@ import (
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials/insecure"
 
-	"go.opentelemetry.io/collector/component"
-	"go.opentelemetry.io/collector/consumer"
-	"go.opentelemetry.io/collector/consumer/consumertest"
-	"go.opentelemetry.io/collector/internal/testdata"
-	"go.opentelemetry.io/collector/obsreport"
-	"go.opentelemetry.io/collector/pdata/plog/plogotlp"
-	"go.opentelemetry.io/collector/receiver/receivertest"
+	"github.com/thousandeyes/opentelemetry-collector/component"
+	"github.com/thousandeyes/opentelemetry-collector/consumer"
+	"github.com/thousandeyes/opentelemetry-collector/consumer/consumertest"
+	"github.com/thousandeyes/opentelemetry-collector/internal/testdata"
+	"github.com/thousandeyes/opentelemetry-collector/obsreport"
+	"github.com/thousandeyes/opentelemetry-collector/pdata/plog/plogotlp"
+	"github.com/thousandeyes/opentelemetry-collector/receiver/receivertest"
 )
 
 func TestExport(t *testing.T) {

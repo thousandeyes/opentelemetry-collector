@@ -1,7 +1,7 @@
 // Copyright The OpenTelemetry Authors
 // SPDX-License-Identifier: Apache-2.0
 
-package obsreporttest // import "go.opentelemetry.io/collector/obsreport/obsreporttest"
+package obsreporttest // import "github.com/thousandeyes/opentelemetry-collector/obsreport/obsreporttest"
 
 import (
 	"net/http"
@@ -14,7 +14,7 @@ import (
 	"github.com/stretchr/testify/require"
 	"go.opentelemetry.io/otel/attribute"
 
-	"go.opentelemetry.io/collector/component"
+	"github.com/thousandeyes/opentelemetry-collector/component"
 )
 
 func newStubPromChecker() (prometheusChecker, error) {

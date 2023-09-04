@@ -17,18 +17,18 @@ import (
 	"go.opentelemetry.io/otel/sdk/trace/tracetest"
 	"go.opentelemetry.io/otel/trace"
 
+	"github.com/thousandeyes/opentelemetry-collector/component"
+	"github.com/thousandeyes/opentelemetry-collector/component/componenttest"
+	"github.com/thousandeyes/opentelemetry-collector/consumer"
+	"github.com/thousandeyes/opentelemetry-collector/consumer/consumererror"
+	"github.com/thousandeyes/opentelemetry-collector/consumer/consumertest"
 	"github.com/thousandeyes/opentelemetry-collector/exporter"
 	"github.com/thousandeyes/opentelemetry-collector/exporter/exporterhelper/internal"
-	"go.opentelemetry.io/collector/component"
-	"go.opentelemetry.io/collector/component/componenttest"
-	"go.opentelemetry.io/collector/consumer"
-	"go.opentelemetry.io/collector/consumer/consumererror"
-	"go.opentelemetry.io/collector/consumer/consumertest"
-	"go.opentelemetry.io/collector/exporter/exportertest"
-	"go.opentelemetry.io/collector/internal/obsreportconfig/obsmetrics"
-	"go.opentelemetry.io/collector/internal/testdata"
-	"go.opentelemetry.io/collector/obsreport/obsreporttest"
-	"go.opentelemetry.io/collector/pdata/pmetric"
+	"github.com/thousandeyes/opentelemetry-collector/exporter/exportertest"
+	"github.com/thousandeyes/opentelemetry-collector/internal/obsreportconfig/obsmetrics"
+	"github.com/thousandeyes/opentelemetry-collector/internal/testdata"
+	"github.com/thousandeyes/opentelemetry-collector/obsreport/obsreporttest"
+	"github.com/thousandeyes/opentelemetry-collector/pdata/pmetric"
 )
 
 const (

@@ -1,14 +1,14 @@
 // Copyright The OpenTelemetry Authors
 // SPDX-License-Identifier: Apache-2.0
 
-package component // import "go.opentelemetry.io/collector/component"
+package component // import "github.com/thousandeyes/opentelemetry-collector/component"
 
 import (
 	"reflect"
 
 	"go.uber.org/multierr"
 
-	"go.opentelemetry.io/collector/confmap"
+	"github.com/thousandeyes/opentelemetry-collector/confmap"
 )
 
 // Config defines the configuration for a component.Component.

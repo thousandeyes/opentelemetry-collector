@@ -1,7 +1,7 @@
 // Copyright The OpenTelemetry Authors
 // SPDX-License-Identifier: Apache-2.0
 
-package ptraceotlp // import "go.opentelemetry.io/collector/pdata/ptrace/ptraceotlp"
+package ptraceotlp // import "github.com/thousandeyes/opentelemetry-collector/pdata/ptrace/ptraceotlp"
 
 import (
 	"context"
@@ -10,8 +10,8 @@ import (
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 
-	otlpcollectortrace "go.opentelemetry.io/collector/pdata/internal/data/protogen/collector/trace/v1"
-	"go.opentelemetry.io/collector/pdata/internal/otlp"
+	otlpcollectortrace "github.com/thousandeyes/opentelemetry-collector/pdata/internal/data/protogen/collector/trace/v1"
+	"github.com/thousandeyes/opentelemetry-collector/pdata/internal/otlp"
 )
 
 // GRPCClient is the client API for OTLP-GRPC Traces service.

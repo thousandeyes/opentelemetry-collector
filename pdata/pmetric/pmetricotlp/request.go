@@ -1,15 +1,15 @@
 // Copyright The OpenTelemetry Authors
 // SPDX-License-Identifier: Apache-2.0
 
-package pmetricotlp // import "go.opentelemetry.io/collector/pdata/pmetric/pmetricotlp"
+package pmetricotlp // import "github.com/thousandeyes/opentelemetry-collector/pdata/pmetric/pmetricotlp"
 
 import (
 	"bytes"
 
-	"go.opentelemetry.io/collector/pdata/internal"
-	otlpcollectormetrics "go.opentelemetry.io/collector/pdata/internal/data/protogen/collector/metrics/v1"
-	"go.opentelemetry.io/collector/pdata/internal/json"
-	"go.opentelemetry.io/collector/pdata/pmetric"
+	"github.com/thousandeyes/opentelemetry-collector/pdata/internal"
+	otlpcollectormetrics "github.com/thousandeyes/opentelemetry-collector/pdata/internal/data/protogen/collector/metrics/v1"
+	"github.com/thousandeyes/opentelemetry-collector/pdata/internal/json"
+	"github.com/thousandeyes/opentelemetry-collector/pdata/pmetric"
 )
 
 var jsonUnmarshaler = &pmetric.JSONUnmarshaler{}

@@ -11,7 +11,7 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"go.opentelemetry.io/collector/service/telemetry"
+	"github.com/thousandeyes/opentelemetry-collector/service/telemetry"
 )
 
 func strPtr(s string) *string {

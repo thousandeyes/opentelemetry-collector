@@ -10,10 +10,10 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"go.opentelemetry.io/collector/component/componenttest"
-	"go.opentelemetry.io/collector/config/confignet"
-	"go.opentelemetry.io/collector/extension/extensiontest"
-	"go.opentelemetry.io/collector/internal/testutil"
+	"github.com/thousandeyes/opentelemetry-collector/component/componenttest"
+	"github.com/thousandeyes/opentelemetry-collector/config/confignet"
+	"github.com/thousandeyes/opentelemetry-collector/extension/extensiontest"
+	"github.com/thousandeyes/opentelemetry-collector/internal/testutil"
 )
 
 func TestFactory_CreateDefaultConfig(t *testing.T) {

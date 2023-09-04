@@ -11,11 +11,9 @@ import (
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
-	"gopkg.in/yaml.v3"
-
-	"go.opentelemetry.io/collector/confmap"
-	"go.opentelemetry.io/collector/confmap/provider/fileprovider"
-	"go.opentelemetry.io/collector/confmap/provider/yamlprovider"
+	"github.com/thousandeyes/opentelemetry-collector/confmap"
+	"github.com/thousandeyes/opentelemetry-collector/confmap/provider/fileprovider"
+	"github.com/thousandeyes/opentelemetry-collector/confmap/provider/yamlprovider"
 )
 
 func newConfig(yamlBytes []byte, factories Factories) (*Config, error) {

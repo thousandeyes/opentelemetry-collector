@@ -1,7 +1,7 @@
 // Copyright The OpenTelemetry Authors
 // SPDX-License-Identifier: Apache-2.0
 
-package service // import "go.opentelemetry.io/collector/service"
+package service // import "github.com/thousandeyes/opentelemetry-collector/service"
 
 import (
 	"context"
@@ -15,21 +15,21 @@ import (
 	"go.uber.org/multierr"
 	"go.uber.org/zap"
 
-	"go.opentelemetry.io/collector/component"
-	"go.opentelemetry.io/collector/config/configtelemetry"
-	"go.opentelemetry.io/collector/confmap"
-	"go.opentelemetry.io/collector/connector"
-	"go.opentelemetry.io/collector/exporter"
-	"go.opentelemetry.io/collector/extension"
-	"go.opentelemetry.io/collector/internal/obsreportconfig"
-	"go.opentelemetry.io/collector/pdata/pcommon"
-	"go.opentelemetry.io/collector/processor"
-	"go.opentelemetry.io/collector/receiver"
-	semconv "go.opentelemetry.io/collector/semconv/v1.18.0"
-	"go.opentelemetry.io/collector/service/extensions"
-	"go.opentelemetry.io/collector/service/internal/graph"
-	"go.opentelemetry.io/collector/service/internal/proctelemetry"
-	"go.opentelemetry.io/collector/service/telemetry"
+	"github.com/thousandeyes/opentelemetry-collector/component"
+	"github.com/thousandeyes/opentelemetry-collector/config/configtelemetry"
+	"github.com/thousandeyes/opentelemetry-collector/confmap"
+	"github.com/thousandeyes/opentelemetry-collector/connector"
+	"github.com/thousandeyes/opentelemetry-collector/exporter"
+	"github.com/thousandeyes/opentelemetry-collector/extension"
+	"github.com/thousandeyes/opentelemetry-collector/internal/obsreportconfig"
+	"github.com/thousandeyes/opentelemetry-collector/pdata/pcommon"
+	"github.com/thousandeyes/opentelemetry-collector/processor"
+	"github.com/thousandeyes/opentelemetry-collector/receiver"
+	semconv "github.com/thousandeyes/opentelemetry-collector/semconv/v1.18.0"
+	"github.com/thousandeyes/opentelemetry-collector/service/extensions"
+	"github.com/thousandeyes/opentelemetry-collector/service/internal/graph"
+	"github.com/thousandeyes/opentelemetry-collector/service/internal/proctelemetry"
+	"github.com/thousandeyes/opentelemetry-collector/service/telemetry"
 )
 
 // Settings holds configuration for building a new service.

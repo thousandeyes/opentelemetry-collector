@@ -1,4 +1,4 @@
-module go.opentelemetry.io/collector/internal/tools
+module github.com/thousandeyes/opentelemetry-collector/internal/tools
 
 go 1.20
 

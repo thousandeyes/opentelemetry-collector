@@ -1,7 +1,7 @@
 // Copyright The OpenTelemetry Authors
 // SPDX-License-Identifier: Apache-2.0
 
-package otlphttpexporter // import "go.opentelemetry.io/collector/exporter/otlphttpexporter"
+package otlphttpexporter // import "github.com/thousandeyes/opentelemetry-collector/exporter/otlphttpexporter"
 
 import (
 	"context"
@@ -10,13 +10,13 @@ import (
 	"strings"
 	"time"
 
+	"github.com/thousandeyes/opentelemetry-collector/component"
+	"github.com/thousandeyes/opentelemetry-collector/config/configcompression"
+	"github.com/thousandeyes/opentelemetry-collector/config/confighttp"
+	"github.com/thousandeyes/opentelemetry-collector/config/configopaque"
+	"github.com/thousandeyes/opentelemetry-collector/consumer"
 	"github.com/thousandeyes/opentelemetry-collector/exporter"
 	"github.com/thousandeyes/opentelemetry-collector/exporter/exporterhelper"
-	"go.opentelemetry.io/collector/component"
-	"go.opentelemetry.io/collector/config/configcompression"
-	"go.opentelemetry.io/collector/config/confighttp"
-	"go.opentelemetry.io/collector/config/configopaque"
-	"go.opentelemetry.io/collector/consumer"
 )
 
 const (

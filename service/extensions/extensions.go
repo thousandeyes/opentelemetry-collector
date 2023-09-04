@@ -1,7 +1,7 @@
 // Copyright The OpenTelemetry Authors
 // SPDX-License-Identifier: Apache-2.0
 
-package extensions // import "go.opentelemetry.io/collector/service/extensions"
+package extensions // import "github.com/thousandeyes/opentelemetry-collector/service/extensions"
 
 import (
 	"context"
@@ -11,11 +11,11 @@ import (
 
 	"go.uber.org/multierr"
 
-	"go.opentelemetry.io/collector/component"
-	"go.opentelemetry.io/collector/confmap"
-	"go.opentelemetry.io/collector/extension"
-	"go.opentelemetry.io/collector/service/internal/components"
-	"go.opentelemetry.io/collector/service/internal/zpages"
+	"github.com/thousandeyes/opentelemetry-collector/component"
+	"github.com/thousandeyes/opentelemetry-collector/confmap"
+	"github.com/thousandeyes/opentelemetry-collector/extension"
+	"github.com/thousandeyes/opentelemetry-collector/service/internal/components"
+	"github.com/thousandeyes/opentelemetry-collector/service/internal/zpages"
 )
 
 const zExtensionName = "zextensionname"

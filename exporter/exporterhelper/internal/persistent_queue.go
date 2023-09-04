@@ -9,8 +9,8 @@ import (
 	"fmt"
 	"sync"
 
-	"go.opentelemetry.io/collector/component"
-	"go.opentelemetry.io/collector/extension/experimental/storage"
+	"github.com/thousandeyes/opentelemetry-collector/component"
+	"github.com/thousandeyes/opentelemetry-collector/extension/experimental/storage"
 )
 
 var (

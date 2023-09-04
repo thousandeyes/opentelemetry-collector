@@ -1,7 +1,7 @@
 // Copyright The OpenTelemetry Authors
 // SPDX-License-Identifier: Apache-2.0
 
-package batchprocessor // import "go.opentelemetry.io/collector/processor/batchprocessor"
+package batchprocessor // import "github.com/thousandeyes/opentelemetry-collector/processor/batchprocessor"
 
 import (
 	"context"
@@ -16,14 +16,14 @@ import (
 	"go.opentelemetry.io/otel/attribute"
 	"go.uber.org/zap"
 
-	"go.opentelemetry.io/collector/client"
-	"go.opentelemetry.io/collector/component"
-	"go.opentelemetry.io/collector/consumer"
-	"go.opentelemetry.io/collector/consumer/consumererror"
-	"go.opentelemetry.io/collector/pdata/plog"
-	"go.opentelemetry.io/collector/pdata/pmetric"
-	"go.opentelemetry.io/collector/pdata/ptrace"
-	"go.opentelemetry.io/collector/processor"
+	"github.com/thousandeyes/opentelemetry-collector/client"
+	"github.com/thousandeyes/opentelemetry-collector/component"
+	"github.com/thousandeyes/opentelemetry-collector/consumer"
+	"github.com/thousandeyes/opentelemetry-collector/consumer/consumererror"
+	"github.com/thousandeyes/opentelemetry-collector/pdata/plog"
+	"github.com/thousandeyes/opentelemetry-collector/pdata/pmetric"
+	"github.com/thousandeyes/opentelemetry-collector/pdata/ptrace"
+	"github.com/thousandeyes/opentelemetry-collector/processor"
 )
 
 // errTooManyBatchers is returned when the MetadataCardinalityLimit has been reached.

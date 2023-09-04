@@ -1,7 +1,7 @@
 // Copyright The OpenTelemetry Authors
 // SPDX-License-Identifier: Apache-2.0
 
-package configcompression // import "go.opentelemetry.io/collector/config/configcompression"
+package configcompression // import "github.com/thousandeyes/opentelemetry-collector/config/configcompression"
 
 import "fmt"
 

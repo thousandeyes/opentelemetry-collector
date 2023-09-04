@@ -11,10 +11,10 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"go.opentelemetry.io/collector/pdata/internal"
-	"go.opentelemetry.io/collector/pdata/internal/data"
-	otlplogs "go.opentelemetry.io/collector/pdata/internal/data/protogen/logs/v1"
-	"go.opentelemetry.io/collector/pdata/pcommon"
+	"github.com/thousandeyes/opentelemetry-collector/pdata/internal"
+	"github.com/thousandeyes/opentelemetry-collector/pdata/internal/data"
+	otlplogs "github.com/thousandeyes/opentelemetry-collector/pdata/internal/data/protogen/logs/v1"
+	"github.com/thousandeyes/opentelemetry-collector/pdata/pcommon"
 )
 
 func TestLogRecord_MoveTo(t *testing.T) {

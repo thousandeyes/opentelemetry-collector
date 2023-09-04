@@ -1,14 +1,14 @@
 // Copyright The OpenTelemetry Authors
 // SPDX-License-Identifier: Apache-2.0
 
-package testcomponents // import "go.opentelemetry.io/collector/service/internal/testcomponents"
+package testcomponents // import "github.com/thousandeyes/opentelemetry-collector/service/internal/testcomponents"
 
 import (
 	"context"
 
-	"go.opentelemetry.io/collector/component"
-	"go.opentelemetry.io/collector/consumer"
-	"go.opentelemetry.io/collector/receiver"
+	"github.com/thousandeyes/opentelemetry-collector/component"
+	"github.com/thousandeyes/opentelemetry-collector/consumer"
+	"github.com/thousandeyes/opentelemetry-collector/receiver"
 )
 
 const receiverType = component.Type("examplereceiver")

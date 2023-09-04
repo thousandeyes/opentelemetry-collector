@@ -1,4 +1,4 @@
-module go.opentelemetry.io/collector/pdata
+module github.com/thousandeyes/opentelemetry-collector/pdata
 
 go 1.20
 

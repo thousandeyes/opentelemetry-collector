@@ -9,7 +9,7 @@ package pmetric
 import (
 	"sort"
 
-	otlpmetrics "go.opentelemetry.io/collector/pdata/internal/data/protogen/metrics/v1"
+	otlpmetrics "github.com/thousandeyes/opentelemetry-collector/pdata/internal/data/protogen/metrics/v1"
 )
 
 // MetricSlice logically represents a slice of Metric.

@@ -1,11 +1,11 @@
 // Copyright The OpenTelemetry Authors
 // SPDX-License-Identifier: Apache-2.0
 
-package pmetric // import "go.opentelemetry.io/collector/pdata/pmetric"
+package pmetric // import "github.com/thousandeyes/opentelemetry-collector/pdata/pmetric"
 
 import (
-	"go.opentelemetry.io/collector/pdata/internal"
-	otlpmetrics "go.opentelemetry.io/collector/pdata/internal/data/protogen/metrics/v1"
+	"github.com/thousandeyes/opentelemetry-collector/pdata/internal"
+	otlpmetrics "github.com/thousandeyes/opentelemetry-collector/pdata/internal/data/protogen/metrics/v1"
 )
 
 var _ MarshalSizer = (*ProtoMarshaler)(nil)

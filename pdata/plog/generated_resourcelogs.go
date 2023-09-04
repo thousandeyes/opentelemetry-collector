@@ -7,9 +7,9 @@
 package plog
 
 import (
-	"go.opentelemetry.io/collector/pdata/internal"
-	otlplogs "go.opentelemetry.io/collector/pdata/internal/data/protogen/logs/v1"
-	"go.opentelemetry.io/collector/pdata/pcommon"
+	"github.com/thousandeyes/opentelemetry-collector/pdata/internal"
+	otlplogs "github.com/thousandeyes/opentelemetry-collector/pdata/internal/data/protogen/logs/v1"
+	"github.com/thousandeyes/opentelemetry-collector/pdata/pcommon"
 )
 
 // ResourceLogs is a collection of logs from a Resource.

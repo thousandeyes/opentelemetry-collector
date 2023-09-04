@@ -1,7 +1,7 @@
 // Copyright The OpenTelemetry Authors
 // SPDX-License-Identifier: Apache-2.0
 
-package obsreport // import "go.opentelemetry.io/collector/obsreport"
+package obsreport // import "github.com/thousandeyes/opentelemetry-collector/obsreport"
 
 import (
 	"go.opentelemetry.io/otel/codes"
@@ -9,7 +9,7 @@ import (
 )
 
 const (
-	scopeName = "go.opentelemetry.io/collector/obsreport"
+	scopeName = "github.com/thousandeyes/opentelemetry-collector/obsreport"
 
 	nameSep = "/"
 )

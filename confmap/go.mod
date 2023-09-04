@@ -1,4 +1,4 @@
-module go.opentelemetry.io/collector/confmap
+module github.com/thousandeyes/opentelemetry-collector/confmap
 
 go 1.20
 
@@ -8,7 +8,7 @@ require (
 	github.com/knadh/koanf/v2 v2.0.1
 	github.com/mitchellh/mapstructure v1.5.1-0.20220423185008-bf980b35cac4
 	github.com/stretchr/testify v1.8.4
-	go.opentelemetry.io/collector/featuregate v1.0.0-rcv0014
+	github.com/thousandeyes/opentelemetry-collector/featuregate v1.0.0-rcv0014
 	go.uber.org/multierr v1.11.0
 	gopkg.in/yaml.v3 v3.0.1
 )
@@ -21,7 +21,7 @@ require (
 	github.com/pmezard/go-difflib v1.0.0 // indirect
 )
 
-replace go.opentelemetry.io/collector/featuregate => ../featuregate
+replace github.com/thousandeyes/opentelemetry-collector/featuregate => ../featuregate
 
 retract (
 	v0.76.0 // Depends on retracted pdata v1.0.0-rc10 module, use v0.76.1

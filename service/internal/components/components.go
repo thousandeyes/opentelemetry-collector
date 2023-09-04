@@ -1,12 +1,12 @@
 // Copyright The OpenTelemetry Authors
 // SPDX-License-Identifier: Apache-2.0
 
-package components // import "go.opentelemetry.io/collector/service/internal/components"
+package components // import "github.com/thousandeyes/opentelemetry-collector/service/internal/components"
 
 import (
 	"go.uber.org/zap"
 
-	"go.opentelemetry.io/collector/component"
+	"github.com/thousandeyes/opentelemetry-collector/component"
 )
 
 // LogStabilityLevel logs the stability level of a component. The log level is set to info for

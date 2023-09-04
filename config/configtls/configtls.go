@@ -1,7 +1,7 @@
 // Copyright The OpenTelemetry Authors
 // SPDX-License-Identifier: Apache-2.0
 
-package configtls // import "go.opentelemetry.io/collector/config/configtls"
+package configtls // import "github.com/thousandeyes/opentelemetry-collector/config/configtls"
 
 import (
 	"crypto/tls"
@@ -12,7 +12,7 @@ import (
 	"sync"
 	"time"
 
-	"go.opentelemetry.io/collector/config/configopaque"
+	"github.com/thousandeyes/opentelemetry-collector/config/configopaque"
 )
 
 // We should avoid that users unknowingly use a vulnerable TLS version.

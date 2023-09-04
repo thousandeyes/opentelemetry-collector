@@ -3,7 +3,7 @@
 
 // Package service handles the command-line, configuration, and runs the
 // OpenTelemetry Collector.
-package otelcol // import "go.opentelemetry.io/collector/otelcol"
+package otelcol // import "github.com/thousandeyes/opentelemetry-collector/otelcol"
 
 import (
 	"context"
@@ -17,15 +17,15 @@ import (
 	"go.uber.org/multierr"
 	"go.uber.org/zap"
 
-	"go.opentelemetry.io/collector/component"
-	"go.opentelemetry.io/collector/confmap"
-	"go.opentelemetry.io/collector/connector"
-	"go.opentelemetry.io/collector/exporter"
-	"go.opentelemetry.io/collector/extension"
-	"go.opentelemetry.io/collector/otelcol/internal/grpclog"
-	"go.opentelemetry.io/collector/processor"
-	"go.opentelemetry.io/collector/receiver"
-	"go.opentelemetry.io/collector/service"
+	"github.com/thousandeyes/opentelemetry-collector/component"
+	"github.com/thousandeyes/opentelemetry-collector/confmap"
+	"github.com/thousandeyes/opentelemetry-collector/connector"
+	"github.com/thousandeyes/opentelemetry-collector/exporter"
+	"github.com/thousandeyes/opentelemetry-collector/extension"
+	"github.com/thousandeyes/opentelemetry-collector/otelcol/internal/grpclog"
+	"github.com/thousandeyes/opentelemetry-collector/processor"
+	"github.com/thousandeyes/opentelemetry-collector/receiver"
+	"github.com/thousandeyes/opentelemetry-collector/service"
 )
 
 // State defines Collector's state.

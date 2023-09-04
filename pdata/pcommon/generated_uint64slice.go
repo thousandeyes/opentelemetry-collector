@@ -7,7 +7,7 @@
 package pcommon
 
 import (
-	"go.opentelemetry.io/collector/pdata/internal"
+	"github.com/thousandeyes/opentelemetry-collector/pdata/internal"
 )
 
 // UInt64Slice represents a []uint64 slice.

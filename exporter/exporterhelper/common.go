@@ -7,11 +7,11 @@ import (
 	"context"
 	"time"
 
+	"github.com/thousandeyes/opentelemetry-collector/component"
+	"github.com/thousandeyes/opentelemetry-collector/consumer"
 	"github.com/thousandeyes/opentelemetry-collector/exporter"
 	"github.com/thousandeyes/opentelemetry-collector/exporter/exporterhelper/internal"
-	"go.opentelemetry.io/collector/component"
-	"go.opentelemetry.io/collector/consumer"
-	"go.opentelemetry.io/collector/obsreport"
+	"github.com/thousandeyes/opentelemetry-collector/obsreport"
 )
 
 // TimeoutSettings for timeout. The timeout applies to individual attempts to send data to the backend.

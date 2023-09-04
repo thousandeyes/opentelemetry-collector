@@ -1,14 +1,14 @@
 // Copyright The OpenTelemetry Authors
 // SPDX-License-Identifier: Apache-2.0
 
-package otlphttpexporter // import "go.opentelemetry.io/collector/exporter/otlphttpexporter"
+package otlphttpexporter // import "github.com/thousandeyes/opentelemetry-collector/exporter/otlphttpexporter"
 
 import (
 	"errors"
 
+	"github.com/thousandeyes/opentelemetry-collector/component"
+	"github.com/thousandeyes/opentelemetry-collector/config/confighttp"
 	"github.com/thousandeyes/opentelemetry-collector/exporter/exporterhelper"
-	"go.opentelemetry.io/collector/component"
-	"go.opentelemetry.io/collector/config/confighttp"
 )
 
 // Config defines configuration for OTLP/HTTP exporter.

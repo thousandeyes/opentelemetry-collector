@@ -1,15 +1,14 @@
 // Copyright The OpenTelemetry Authors
 // SPDX-License-Identifier: Apache-2.0
 
-package otelcol // import "go.opentelemetry.io/collector/otelcol"
+package otelcol // import "github.com/thousandeyes/opentelemetry-collector/otelcol"
 
 import (
 	"fmt"
-
-	"github.com/spf13/cobra"
 	"gopkg.in/yaml.v3"
 
-	"go.opentelemetry.io/collector/component"
+	"github.com/spf13/cobra"
+	"github.com/thousandeyes/opentelemetry-collector/component"
 )
 
 type componentWithStability struct {

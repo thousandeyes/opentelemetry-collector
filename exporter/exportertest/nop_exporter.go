@@ -1,15 +1,15 @@
 // Copyright The OpenTelemetry Authors
 // SPDX-License-Identifier: Apache-2.0
 
-package exportertest // import "go.opentelemetry.io/collector/exporter/exportertest"
+package exportertest // import "github.com/thousandeyes/opentelemetry-collector/exporter/exportertest"
 
 import (
 	"context"
 
+	"github.com/thousandeyes/opentelemetry-collector/component"
+	"github.com/thousandeyes/opentelemetry-collector/component/componenttest"
+	"github.com/thousandeyes/opentelemetry-collector/consumer/consumertest"
 	"github.com/thousandeyes/opentelemetry-collector/exporter"
-	"go.opentelemetry.io/collector/component"
-	"go.opentelemetry.io/collector/component/componenttest"
-	"go.opentelemetry.io/collector/consumer/consumertest"
 )
 
 const typeStr = "nop"

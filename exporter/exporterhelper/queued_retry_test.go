@@ -18,14 +18,14 @@ import (
 	"go.opencensus.io/metric/metricproducer"
 	"go.opencensus.io/tag"
 
+	"github.com/thousandeyes/opentelemetry-collector/component"
+	"github.com/thousandeyes/opentelemetry-collector/component/componenttest"
+	"github.com/thousandeyes/opentelemetry-collector/consumer/consumererror"
 	"github.com/thousandeyes/opentelemetry-collector/exporter/exporterhelper/internal"
-	"go.opentelemetry.io/collector/component"
-	"go.opentelemetry.io/collector/component/componenttest"
-	"go.opentelemetry.io/collector/consumer/consumererror"
-	"go.opentelemetry.io/collector/exporter/exportertest"
-	"go.opentelemetry.io/collector/extension/experimental/storage"
-	"go.opentelemetry.io/collector/internal/testdata"
-	"go.opentelemetry.io/collector/obsreport/obsreporttest"
+	"github.com/thousandeyes/opentelemetry-collector/exporter/exportertest"
+	"github.com/thousandeyes/opentelemetry-collector/extension/experimental/storage"
+	"github.com/thousandeyes/opentelemetry-collector/internal/testdata"
+	"github.com/thousandeyes/opentelemetry-collector/obsreport/obsreporttest"
 )
 
 func mockRequestUnmarshaler(mr *mockRequest) internal.RequestUnmarshaler {

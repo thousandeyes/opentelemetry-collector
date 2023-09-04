@@ -1,14 +1,14 @@
-module go.opentelemetry.io/collector/extension/zpagesextension
+module github.com/thousandeyes/opentelemetry-collector/extension/zpagesextension
 
 go 1.20
 
 require (
 	github.com/stretchr/testify v1.8.4
-	go.opentelemetry.io/collector v0.84.0
-	go.opentelemetry.io/collector/component v0.84.0
-	go.opentelemetry.io/collector/config/confignet v0.84.0
-	go.opentelemetry.io/collector/confmap v0.84.0
-	go.opentelemetry.io/collector/extension v0.84.0
+	github.com/thousandeyes/opentelemetry-collector v0.0.0-20230904160414-bb0c230d9653
+	github.com/thousandeyes/opentelemetry-collector/component v0.0.0-20230904160414-bb0c230d9653
+	github.com/thousandeyes/opentelemetry-collector/config/confignet v0.0.0-20230904160414-bb0c230d9653
+	github.com/thousandeyes/opentelemetry-collector/confmap v0.0.0-20230904160414-bb0c230d9653
+	github.com/thousandeyes/opentelemetry-collector/extension v0.0.0-20230904160414-bb0c230d9653
 	go.opentelemetry.io/contrib/zpages v0.42.0
 	go.opentelemetry.io/otel/sdk v1.16.0
 	go.opentelemetry.io/otel/trace v1.16.0
@@ -29,9 +29,9 @@ require (
 	github.com/mitchellh/reflectwalk v1.0.2 // indirect
 	github.com/pmezard/go-difflib v1.0.0 // indirect
 	go.opencensus.io v0.24.0 // indirect
-	go.opentelemetry.io/collector/config/configtelemetry v0.84.0 // indirect
-	go.opentelemetry.io/collector/featuregate v1.0.0-rcv0014 // indirect
-	go.opentelemetry.io/collector/pdata v1.0.0-rcv0014 // indirect
+	github.com/thousandeyes/opentelemetry-collector/config/configtelemetry v0.0.0-20230904160414-bb0c230d9653 // indirect
+	github.com/thousandeyes/opentelemetry-collector/featuregate v1.0.0-rcv0014 // indirect
+	github.com/thousandeyes/opentelemetry-collector/pdata v1.0.0-rcv0014 // indirect
 	go.opentelemetry.io/otel v1.16.0 // indirect
 	go.opentelemetry.io/otel/metric v1.16.0 // indirect
 	go.uber.org/multierr v1.11.0 // indirect
@@ -44,35 +44,35 @@ require (
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
 
-replace go.opentelemetry.io/collector => ../../
+replace github.com/thousandeyes/opentelemetry-collector => ../../
 
-replace go.opentelemetry.io/collector/component => ../../component
+replace github.com/thousandeyes/opentelemetry-collector/component => ../../component
 
-replace go.opentelemetry.io/collector/config/confignet => ../../config/confignet
+replace github.com/thousandeyes/opentelemetry-collector/config/confignet => ../../config/confignet
 
-replace go.opentelemetry.io/collector/confmap => ../../confmap
+replace github.com/thousandeyes/opentelemetry-collector/confmap => ../../confmap
 
-replace go.opentelemetry.io/collector/exporter => ../../exporter
+replace github.com/thousandeyes/opentelemetry-collector/exporter => ../../exporter
 
-replace go.opentelemetry.io/collector/extension => ../
+replace github.com/thousandeyes/opentelemetry-collector/extension => ../
 
-replace go.opentelemetry.io/collector/featuregate => ../../featuregate
+replace github.com/thousandeyes/opentelemetry-collector/featuregate => ../../featuregate
 
-replace go.opentelemetry.io/collector/pdata => ../../pdata
+replace github.com/thousandeyes/opentelemetry-collector/pdata => ../../pdata
 
-replace go.opentelemetry.io/collector/processor => ../../processor
+replace github.com/thousandeyes/opentelemetry-collector/processor => ../../processor
 
-replace go.opentelemetry.io/collector/receiver => ../../receiver
+replace github.com/thousandeyes/opentelemetry-collector/receiver => ../../receiver
 
-replace go.opentelemetry.io/collector/semconv => ../../semconv
+replace github.com/thousandeyes/opentelemetry-collector/semconv => ../../semconv
 
-replace go.opentelemetry.io/collector/consumer => ../../consumer
+replace github.com/thousandeyes/opentelemetry-collector/consumer => ../../consumer
 
 retract (
 	v0.76.0 // Depends on retracted pdata v1.0.0-rc10 module, use v0.76.1
 	v0.69.0 // Release failed, use v0.69.1
 )
 
-replace go.opentelemetry.io/collector/connector => ../../connector
+replace github.com/thousandeyes/opentelemetry-collector/connector => ../../connector
 
-replace go.opentelemetry.io/collector/config/configtelemetry => ../../config/configtelemetry
+replace github.com/thousandeyes/opentelemetry-collector/config/configtelemetry => ../../config/configtelemetry

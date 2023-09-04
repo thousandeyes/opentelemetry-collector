@@ -6,7 +6,7 @@ This program generates a custom OpenTelemetry Collector binary based on a given 
 ## TL;DR
 
 ```console
-$ GO111MODULE=on go install go.opentelemetry.io/collector/cmd/builder@latest
+$ GO111MODULE=on go install github.com/thousandeyes/opentelemetry-collector/cmd/builder@latest
 $ cat > otelcol-builder.yaml <<EOF
 dist:
   name: otelcol-custom
@@ -14,13 +14,13 @@ dist:
   output_path: /tmp/dist
 exporters:
   - gomod: github.com/open-telemetry/opentelemetry-collector-contrib/exporter/alibabacloudlogserviceexporter v0.69.0
-  - gomod: go.opentelemetry.io/collector/exporter/loggingexporter v0.69.1
+  - gomod: github.com/thousandeyes/opentelemetry-collector/exporter/loggingexporter v0.69.1
 
 receivers:
-  - gomod: go.opentelemetry.io/collector/receiver/otlpreceiver v0.69.1
+  - gomod: github.com/thousandeyes/opentelemetry-collector/receiver/otlpreceiver v0.69.1
 
 processors:
-  - gomod: go.opentelemetry.io/collector/processor/batchprocessor v0.69.1
+  - gomod: github.com/thousandeyes/opentelemetry-collector/processor/batchprocessor v0.69.1
 EOF
 $ builder --config=otelcol-builder.yaml
 $ cat > /tmp/otelcol.yaml <<EOF

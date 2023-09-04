@@ -1,7 +1,7 @@
 // Copyright The OpenTelemetry Authors
 // SPDX-License-Identifier: Apache-2.0
 
-package confmap // import "go.opentelemetry.io/collector/confmap"
+package confmap // import "github.com/thousandeyes/opentelemetry-collector/confmap"
 
 import (
 	"context"
@@ -12,7 +12,7 @@ import (
 
 	"go.uber.org/multierr"
 
-	"go.opentelemetry.io/collector/featuregate"
+	"github.com/thousandeyes/opentelemetry-collector/featuregate"
 )
 
 // follows drive-letter specification:

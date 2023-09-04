@@ -3,13 +3,13 @@
 
 // Package sharedcomponent exposes util functionality for receivers and exporters
 // that need to share state between different signal types instances such as net.Listener or os.File.
-package sharedcomponent // import "go.opentelemetry.io/collector/internal/sharedcomponent"
+package sharedcomponent // import "github.com/thousandeyes/opentelemetry-collector/internal/sharedcomponent"
 
 import (
 	"context"
 	"sync"
 
-	"go.opentelemetry.io/collector/component"
+	"github.com/thousandeyes/opentelemetry-collector/component"
 )
 
 // SharedComponents a map that keeps reference of all created instances for a given configuration,

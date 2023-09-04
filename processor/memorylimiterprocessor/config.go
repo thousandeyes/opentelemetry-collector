@@ -3,12 +3,12 @@
 
 // Package memorylimiterprocessor provides a processor for OpenTelemetry Service pipeline
 // that refuses data on the pipeline according to the current state of memory usage.
-package memorylimiterprocessor // import "go.opentelemetry.io/collector/processor/memorylimiterprocessor"
+package memorylimiterprocessor // import "github.com/thousandeyes/opentelemetry-collector/processor/memorylimiterprocessor"
 
 import (
 	"time"
 
-	"go.opentelemetry.io/collector/component"
+	"github.com/thousandeyes/opentelemetry-collector/component"
 )
 
 // Config defines configuration for memory memoryLimiter processor.

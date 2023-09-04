@@ -7,7 +7,7 @@
 package pmetric
 
 import (
-	otlpmetrics "go.opentelemetry.io/collector/pdata/internal/data/protogen/metrics/v1"
+	otlpmetrics "github.com/thousandeyes/opentelemetry-collector/pdata/internal/data/protogen/metrics/v1"
 )
 
 // Gauge represents the type of a numeric metric that always exports the "current value" for every data point.

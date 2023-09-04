@@ -1,7 +1,7 @@
 // Copyright The OpenTelemetry Authors
 // SPDX-License-Identifier: Apache-2.0
 
-package proctelemetry // import "go.opentelemetry.io/collector/service/internal/proctelemetry"
+package proctelemetry // import "github.com/thousandeyes/opentelemetry-collector/service/internal/proctelemetry"
 
 import (
 	"context"
@@ -31,9 +31,9 @@ import (
 	"go.opentelemetry.io/otel/sdk/resource"
 	sdktrace "go.opentelemetry.io/otel/sdk/trace"
 
-	"go.opentelemetry.io/collector/obsreport"
-	semconv "go.opentelemetry.io/collector/semconv/v1.18.0"
-	"go.opentelemetry.io/collector/service/telemetry"
+	"github.com/thousandeyes/opentelemetry-collector/obsreport"
+	semconv "github.com/thousandeyes/opentelemetry-collector/semconv/v1.18.0"
+	"github.com/thousandeyes/opentelemetry-collector/service/telemetry"
 )
 
 const (

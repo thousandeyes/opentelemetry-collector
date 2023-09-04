@@ -1,16 +1,16 @@
 // Copyright The OpenTelemetry Authors
 // SPDX-License-Identifier: Apache-2.0
 
-package memorylimiterprocessor // import "go.opentelemetry.io/collector/processor/memorylimiterprocessor"
+package memorylimiterprocessor // import "github.com/thousandeyes/opentelemetry-collector/processor/memorylimiterprocessor"
 
 import (
 	"context"
 	"sync"
 
-	"go.opentelemetry.io/collector/component"
-	"go.opentelemetry.io/collector/consumer"
-	"go.opentelemetry.io/collector/processor"
-	"go.opentelemetry.io/collector/processor/processorhelper"
+	"github.com/thousandeyes/opentelemetry-collector/component"
+	"github.com/thousandeyes/opentelemetry-collector/consumer"
+	"github.com/thousandeyes/opentelemetry-collector/processor"
+	"github.com/thousandeyes/opentelemetry-collector/processor/processorhelper"
 )
 
 const (

@@ -13,9 +13,9 @@ import (
 	_ "github.com/gogo/protobuf/gogoproto"
 	proto "github.com/gogo/protobuf/proto"
 
-	go_opentelemetry_io_collector_pdata_internal_data "go.opentelemetry.io/collector/pdata/internal/data"
-	v11 "go.opentelemetry.io/collector/pdata/internal/data/protogen/common/v1"
-	v1 "go.opentelemetry.io/collector/pdata/internal/data/protogen/resource/v1"
+	go_opentelemetry_io_collector_pdata_internal_data "github.com/thousandeyes/opentelemetry-collector/pdata/internal/data"
+	v11 "github.com/thousandeyes/opentelemetry-collector/pdata/internal/data/protogen/common/v1"
+	v1 "github.com/thousandeyes/opentelemetry-collector/pdata/internal/data/protogen/resource/v1"
 )
 
 // Reference imports to suppress errors if they are not otherwise used.
@@ -325,21 +325,21 @@ type Span struct {
 	// is zero-length and thus is also invalid).
 	//
 	// This field is required.
-	TraceId go_opentelemetry_io_collector_pdata_internal_data.TraceID `protobuf:"bytes,1,opt,name=trace_id,json=traceId,proto3,customtype=go.opentelemetry.io/collector/pdata/internal/data.TraceID" json:"trace_id"`
+	TraceId go_opentelemetry_io_collector_pdata_internal_data.TraceID `protobuf:"bytes,1,opt,name=trace_id,json=traceId,proto3,customtype=github.com/thousandeyes/opentelemetry-collector/pdata/internal/data.TraceID" json:"trace_id"`
 	// A unique identifier for a span within a trace, assigned when the span
 	// is created. The ID is an 8-byte array. An ID with all zeroes OR of length
 	// other than 8 bytes is considered invalid (empty string in OTLP/JSON
 	// is zero-length and thus is also invalid).
 	//
 	// This field is required.
-	SpanId go_opentelemetry_io_collector_pdata_internal_data.SpanID `protobuf:"bytes,2,opt,name=span_id,json=spanId,proto3,customtype=go.opentelemetry.io/collector/pdata/internal/data.SpanID" json:"span_id"`
+	SpanId go_opentelemetry_io_collector_pdata_internal_data.SpanID `protobuf:"bytes,2,opt,name=span_id,json=spanId,proto3,customtype=github.com/thousandeyes/opentelemetry-collector/pdata/internal/data.SpanID" json:"span_id"`
 	// trace_state conveys information about request position in multiple distributed tracing graphs.
 	// It is a trace_state in w3c-trace-context format: https://www.w3.org/TR/trace-context/#tracestate-header
 	// See also https://github.com/w3c/distributed-tracing for more details about this field.
 	TraceState string `protobuf:"bytes,3,opt,name=trace_state,json=traceState,proto3" json:"trace_state,omitempty"`
 	// The `span_id` of this span's parent span. If this is a root span, then this
 	// field must be empty. The ID is an 8-byte array.
-	ParentSpanId go_opentelemetry_io_collector_pdata_internal_data.SpanID `protobuf:"bytes,4,opt,name=parent_span_id,json=parentSpanId,proto3,customtype=go.opentelemetry.io/collector/pdata/internal/data.SpanID" json:"parent_span_id"`
+	ParentSpanId go_opentelemetry_io_collector_pdata_internal_data.SpanID `protobuf:"bytes,4,opt,name=parent_span_id,json=parentSpanId,proto3,customtype=github.com/thousandeyes/opentelemetry-collector/pdata/internal/data.SpanID" json:"parent_span_id"`
 	// A description of the span's operation.
 	//
 	// For example, the name can be a qualified method name or a file name
@@ -605,9 +605,9 @@ func (m *Span_Event) GetDroppedAttributesCount() uint32 {
 type Span_Link struct {
 	// A unique identifier of a trace that this linked span is part of. The ID is a
 	// 16-byte array.
-	TraceId go_opentelemetry_io_collector_pdata_internal_data.TraceID `protobuf:"bytes,1,opt,name=trace_id,json=traceId,proto3,customtype=go.opentelemetry.io/collector/pdata/internal/data.TraceID" json:"trace_id"`
+	TraceId go_opentelemetry_io_collector_pdata_internal_data.TraceID `protobuf:"bytes,1,opt,name=trace_id,json=traceId,proto3,customtype=github.com/thousandeyes/opentelemetry-collector/pdata/internal/data.TraceID" json:"trace_id"`
 	// A unique identifier for the linked span. The ID is an 8-byte array.
-	SpanId go_opentelemetry_io_collector_pdata_internal_data.SpanID `protobuf:"bytes,2,opt,name=span_id,json=spanId,proto3,customtype=go.opentelemetry.io/collector/pdata/internal/data.SpanID" json:"span_id"`
+	SpanId go_opentelemetry_io_collector_pdata_internal_data.SpanID `protobuf:"bytes,2,opt,name=span_id,json=spanId,proto3,customtype=github.com/thousandeyes/opentelemetry-collector/pdata/internal/data.SpanID" json:"span_id"`
 	// The trace_state associated with the link.
 	TraceState string `protobuf:"bytes,3,opt,name=trace_state,json=traceState,proto3" json:"trace_state,omitempty"`
 	// attributes is a collection of attribute key/value pairs on the link.

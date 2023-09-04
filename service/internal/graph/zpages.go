@@ -1,13 +1,13 @@
 // Copyright The OpenTelemetry Authors
 // SPDX-License-Identifier: Apache-2.0
 
-package graph // import "go.opentelemetry.io/collector/service/internal/graph"
+package graph // import "github.com/thousandeyes/opentelemetry-collector/service/internal/graph"
 
 import (
 	"net/http"
 	"sort"
 
-	"go.opentelemetry.io/collector/service/internal/zpages"
+	"github.com/thousandeyes/opentelemetry-collector/service/internal/zpages"
 )
 
 const (

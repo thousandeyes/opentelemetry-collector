@@ -1,7 +1,7 @@
 // Copyright The OpenTelemetry Authors
 // SPDX-License-Identifier: Apache-2.0
 
-package obsmetrics // import "go.opentelemetry.io/collector/internal/obsreportconfig/obsmetrics"
+package obsmetrics // import "github.com/thousandeyes/opentelemetry-collector/internal/obsreportconfig/obsmetrics"
 
 import (
 	"go.opencensus.io/stats"

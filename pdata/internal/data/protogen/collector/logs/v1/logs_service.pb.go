@@ -16,7 +16,7 @@ import (
 	codes "google.golang.org/grpc/codes"
 	status "google.golang.org/grpc/status"
 
-	v1 "go.opentelemetry.io/collector/pdata/internal/data/protogen/logs/v1"
+	v1 "github.com/thousandeyes/opentelemetry-collector/pdata/internal/data/protogen/logs/v1"
 )
 
 // Reference imports to suppress errors if they are not otherwise used.

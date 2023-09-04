@@ -1,13 +1,13 @@
 // Copyright The OpenTelemetry Authors
 // SPDX-License-Identifier: Apache-2.0
 
-package expandconverter // import "go.opentelemetry.io/collector/confmap/converter/expandconverter"
+package expandconverter // import "github.com/thousandeyes/opentelemetry-collector/confmap/converter/expandconverter"
 
 import (
 	"context"
 	"os"
 
-	"go.opentelemetry.io/collector/confmap"
+	"github.com/thousandeyes/opentelemetry-collector/confmap"
 )
 
 type converter struct{}

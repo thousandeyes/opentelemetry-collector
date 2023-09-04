@@ -1,7 +1,7 @@
 // Copyright The OpenTelemetry Authors
 // SPDX-License-Identifier: Apache-2.0
 
-package confmap // import "go.opentelemetry.io/collector/confmap"
+package confmap // import "github.com/thousandeyes/opentelemetry-collector/confmap"
 
 import (
 	"encoding"
@@ -13,7 +13,7 @@ import (
 	"github.com/knadh/koanf/v2"
 	"github.com/mitchellh/mapstructure"
 
-	encoder "go.opentelemetry.io/collector/confmap/internal/mapstructure"
+	encoder "github.com/thousandeyes/opentelemetry-collector/confmap/internal/mapstructure"
 )
 
 const (

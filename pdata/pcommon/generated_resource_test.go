@@ -11,7 +11,7 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"go.opentelemetry.io/collector/pdata/internal"
+	"github.com/thousandeyes/opentelemetry-collector/pdata/internal"
 )
 
 func TestResource_MoveTo(t *testing.T) {

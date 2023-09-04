@@ -7,7 +7,7 @@
 package internal
 
 import (
-	otlpcommon "go.opentelemetry.io/collector/pdata/internal/data/protogen/common/v1"
+	otlpcommon "github.com/thousandeyes/opentelemetry-collector/pdata/internal/data/protogen/common/v1"
 )
 
 type InstrumentationScope struct {

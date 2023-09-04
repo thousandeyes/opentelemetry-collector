@@ -2,4 +2,4 @@
 // SPDX-License-Identifier: Apache-2.0
 
 // Package forwardconnector passes signals from one pipeline to another.
-package forwardconnector // import "go.opentelemetry.io/collector/connector/forwardconnector"
+package forwardconnector // import "github.com/thousandeyes/opentelemetry-collector/connector/forwardconnector"

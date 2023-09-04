@@ -1,13 +1,13 @@
 // Copyright The OpenTelemetry Authors
 // SPDX-License-Identifier: Apache-2.0
 
-package pcommon // import "go.opentelemetry.io/collector/pdata/pcommon"
+package pcommon // import "github.com/thousandeyes/opentelemetry-collector/pdata/pcommon"
 
 import (
 	"go.uber.org/multierr"
 
-	"go.opentelemetry.io/collector/pdata/internal"
-	otlpcommon "go.opentelemetry.io/collector/pdata/internal/data/protogen/common/v1"
+	"github.com/thousandeyes/opentelemetry-collector/pdata/internal"
+	otlpcommon "github.com/thousandeyes/opentelemetry-collector/pdata/internal/data/protogen/common/v1"
 )
 
 // Map stores a map of string keys to elements of Value type.

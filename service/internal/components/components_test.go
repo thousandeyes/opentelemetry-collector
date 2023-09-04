@@ -1,7 +1,7 @@
 // Copyright The OpenTelemetry Authors
 // SPDX-License-Identifier: Apache-2.0
 
-package components // import "go.opentelemetry.io/collector/service/internal/components"
+package components // import "github.com/thousandeyes/opentelemetry-collector/service/internal/components"
 
 import (
 	"testing"
@@ -11,7 +11,7 @@ import (
 	"go.uber.org/zap/zapcore"
 	"go.uber.org/zap/zaptest/observer"
 
-	"go.opentelemetry.io/collector/component"
+	"github.com/thousandeyes/opentelemetry-collector/component"
 )
 
 func TestLogStabilityLevel(t *testing.T) {

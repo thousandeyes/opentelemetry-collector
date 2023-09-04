@@ -7,7 +7,7 @@
 package pcommon
 
 import (
-	"go.opentelemetry.io/collector/pdata/internal"
+	"github.com/thousandeyes/opentelemetry-collector/pdata/internal"
 )
 
 // Float64Slice represents a []float64 slice.

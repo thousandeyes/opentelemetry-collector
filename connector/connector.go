@@ -1,7 +1,7 @@
 // Copyright The OpenTelemetry Authors
 // SPDX-License-Identifier: Apache-2.0
 
-package connector // import "go.opentelemetry.io/collector/connector"
+package connector // import "github.com/thousandeyes/opentelemetry-collector/connector"
 
 import (
 	"context"
@@ -9,8 +9,8 @@ import (
 
 	"go.uber.org/zap"
 
-	"go.opentelemetry.io/collector/component"
-	"go.opentelemetry.io/collector/consumer"
+	"github.com/thousandeyes/opentelemetry-collector/component"
+	"github.com/thousandeyes/opentelemetry-collector/consumer"
 )
 
 // A Traces connector acts as an exporter from a traces pipeline and a receiver

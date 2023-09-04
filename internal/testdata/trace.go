@@ -6,8 +6,8 @@ package testdata
 import (
 	"time"
 
-	"go.opentelemetry.io/collector/pdata/pcommon"
-	"go.opentelemetry.io/collector/pdata/ptrace"
+	"github.com/thousandeyes/opentelemetry-collector/pdata/pcommon"
+	"github.com/thousandeyes/opentelemetry-collector/pdata/ptrace"
 )
 
 var (

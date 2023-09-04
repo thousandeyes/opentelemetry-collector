@@ -20,7 +20,7 @@ for line in $requests; do
     fi
 
     module=$(echo "$line" | cut -f 2 -d " ")
-    if [[ $module == go.opentelemetry.io/collector* ]]; then
+    if [[ $module == github.com/thousandeyes/opentelemetry-collector* ]]; then
         continue
     fi
     version=$(echo "$line" | cut -f 6 -d " ")

@@ -4,7 +4,7 @@
 // Package obsmetrics defines the obsreport metrics for each components
 // all the metrics is in OpenCensus format which will be replaced with OTEL Metrics
 // in the future
-package obsmetrics // import "go.opentelemetry.io/collector/internal/obsreportconfig/obsmetrics"
+package obsmetrics // import "github.com/thousandeyes/opentelemetry-collector/internal/obsreportconfig/obsmetrics"
 
 const (
 	NameSep = "/"

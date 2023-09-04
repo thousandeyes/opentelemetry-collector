@@ -1,10 +1,10 @@
 // Copyright The OpenTelemetry Authors
 // SPDX-License-Identifier: Apache-2.0
 
-package otlptext // import "go.opentelemetry.io/collector/exporter/loggingexporter/internal/otlptext"
+package otlptext // import "github.com/thousandeyes/opentelemetry-collector/exporter/loggingexporter/internal/otlptext"
 
 import (
-	"go.opentelemetry.io/collector/pdata/ptrace"
+	"github.com/thousandeyes/opentelemetry-collector/pdata/ptrace"
 )
 
 // NewTextTracesMarshaler returns a ptrace.Marshaler to encode to OTLP text bytes.

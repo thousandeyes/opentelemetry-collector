@@ -13,7 +13,7 @@ import (
 
 	"go.uber.org/zap"
 
-	"go.opentelemetry.io/collector/extension/experimental/storage"
+	"github.com/thousandeyes/opentelemetry-collector/extension/experimental/storage"
 )
 
 // persistentContiguousStorage provides a persistent queue implementation backed by file storage extension

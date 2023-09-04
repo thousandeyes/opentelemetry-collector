@@ -1,14 +1,14 @@
 // Copyright The OpenTelemetry Authors
 // SPDX-License-Identifier: Apache-2.0
 
-package service // import "go.opentelemetry.io/collector/service"
+package service // import "github.com/thousandeyes/opentelemetry-collector/service"
 
 import (
 	"fmt"
 
-	"go.opentelemetry.io/collector/service/extensions"
-	"go.opentelemetry.io/collector/service/pipelines"
-	"go.opentelemetry.io/collector/service/telemetry"
+	"github.com/thousandeyes/opentelemetry-collector/service/extensions"
+	"github.com/thousandeyes/opentelemetry-collector/service/pipelines"
+	"github.com/thousandeyes/opentelemetry-collector/service/telemetry"
 )
 
 // Deprecated: [v0.80.0] use pipelines.PipelineConfig.

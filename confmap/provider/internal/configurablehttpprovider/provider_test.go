@@ -23,7 +23,7 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"go.opentelemetry.io/collector/confmap/confmaptest"
+	"github.com/thousandeyes/opentelemetry-collector/confmap/confmaptest"
 )
 
 func newConfigurableHTTPProvider(scheme SchemeType) *provider {

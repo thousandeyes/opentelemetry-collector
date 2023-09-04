@@ -9,7 +9,7 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"go.opentelemetry.io/collector/confmap/confmaptest"
+	"github.com/thousandeyes/opentelemetry-collector/confmap/confmaptest"
 )
 
 func TestValidateProviderScheme(t *testing.T) {

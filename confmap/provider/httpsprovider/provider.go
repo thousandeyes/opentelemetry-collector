@@ -1,11 +1,11 @@
 // Copyright The OpenTelemetry Authors
 // SPDX-License-Identifier: Apache-2.0
 
-package httpsprovider // import "go.opentelemetry.io/collector/confmap/provider/httpsprovider"
+package httpsprovider // import "github.com/thousandeyes/opentelemetry-collector/confmap/provider/httpsprovider"
 
 import (
-	"go.opentelemetry.io/collector/confmap"
-	"go.opentelemetry.io/collector/confmap/provider/internal/configurablehttpprovider"
+	"github.com/thousandeyes/opentelemetry-collector/confmap"
+	"github.com/thousandeyes/opentelemetry-collector/confmap/provider/internal/configurablehttpprovider"
 )
 
 // New returns a new confmap.Provider that reads the configuration from a https server.

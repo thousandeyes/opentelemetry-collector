@@ -1,7 +1,7 @@
 // Copyright The OpenTelemetry Authors
 // SPDX-License-Identifier: Apache-2.0
 
-package builder // import "go.opentelemetry.io/collector/cmd/builder/internal/builder"
+package builder // import "github.com/thousandeyes/opentelemetry-collector/cmd/builder/internal/builder"
 
 import (
 	"errors"
@@ -76,7 +76,7 @@ func NewDefaultConfig() Config {
 		Distribution: Distribution{
 			OutputPath:     outputDir,
 			OtelColVersion: defaultOtelColVersion,
-			Module:         "go.opentelemetry.io/collector/cmd/builder",
+			Module:         "github.com/thousandeyes/opentelemetry-collector/cmd/builder",
 		},
 	}
 }

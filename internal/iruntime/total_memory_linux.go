@@ -4,9 +4,9 @@
 //go:build linux
 // +build linux
 
-package iruntime // import "go.opentelemetry.io/collector/internal/iruntime"
+package iruntime // import "github.com/thousandeyes/opentelemetry-collector/internal/iruntime"
 
-import "go.opentelemetry.io/collector/internal/cgroups"
+import "github.com/thousandeyes/opentelemetry-collector/internal/cgroups"
 
 // unlimitedMemorySize defines the bytes size when memory limit is not set
 // for the container and process with cgroups

@@ -7,7 +7,7 @@
 package plogotlp
 
 import (
-	otlpcollectorlog "go.opentelemetry.io/collector/pdata/internal/data/protogen/collector/logs/v1"
+	otlpcollectorlog "github.com/thousandeyes/opentelemetry-collector/pdata/internal/data/protogen/collector/logs/v1"
 )
 
 // ExportPartialSuccess represents the details of a partially successful export request.

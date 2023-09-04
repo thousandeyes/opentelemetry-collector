@@ -25,10 +25,10 @@ import (
 	sdkmetric "go.opentelemetry.io/otel/sdk/metric"
 	"go.opentelemetry.io/otel/sdk/resource"
 
-	"go.opentelemetry.io/collector/component"
-	"go.opentelemetry.io/collector/component/componenttest"
-	"go.opentelemetry.io/collector/config/configtelemetry"
-	"go.opentelemetry.io/collector/internal/obsreportconfig"
+	"github.com/thousandeyes/opentelemetry-collector/component"
+	"github.com/thousandeyes/opentelemetry-collector/component/componenttest"
+	"github.com/thousandeyes/opentelemetry-collector/config/configtelemetry"
+	"github.com/thousandeyes/opentelemetry-collector/internal/obsreportconfig"
 )
 
 type testTelemetry struct {
@@ -42,7 +42,7 @@ type testTelemetry struct {
 var expectedMetrics = []string{
 	// Changing a metric name is a breaking change.
 	// Adding new metrics is ok as long it follows the conventions described at
-	// https://pkg.go.dev/go.opentelemetry.io/collector/obsreport?tab=doc#hdr-Naming_Convention_for_New_Metrics
+	// https://pkg.go.dev/github.com/thousandeyes/opentelemetry-collector/obsreport?tab=doc#hdr-Naming_Convention_for_New_Metrics
 	"process/uptime",
 	"process/runtime/heap_alloc_bytes",
 	"process/runtime/total_alloc_bytes",

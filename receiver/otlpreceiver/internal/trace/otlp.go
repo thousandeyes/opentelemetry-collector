@@ -1,14 +1,14 @@
 // Copyright The OpenTelemetry Authors
 // SPDX-License-Identifier: Apache-2.0
 
-package trace // import "go.opentelemetry.io/collector/receiver/otlpreceiver/internal/trace"
+package trace // import "github.com/thousandeyes/opentelemetry-collector/receiver/otlpreceiver/internal/trace"
 
 import (
 	"context"
 
-	"go.opentelemetry.io/collector/consumer"
-	"go.opentelemetry.io/collector/obsreport"
-	"go.opentelemetry.io/collector/pdata/ptrace/ptraceotlp"
+	"github.com/thousandeyes/opentelemetry-collector/consumer"
+	"github.com/thousandeyes/opentelemetry-collector/obsreport"
+	"github.com/thousandeyes/opentelemetry-collector/pdata/ptrace/ptraceotlp"
 )
 
 const dataFormatProtobuf = "protobuf"

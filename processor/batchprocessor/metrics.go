@@ -1,7 +1,7 @@
 // Copyright The OpenTelemetry Authors
 // SPDX-License-Identifier: Apache-2.0
 
-package batchprocessor // import "go.opentelemetry.io/collector/processor/batchprocessor"
+package batchprocessor // import "github.com/thousandeyes/opentelemetry-collector/processor/batchprocessor"
 
 import (
 	"context"
@@ -12,14 +12,14 @@ import (
 	"go.opentelemetry.io/otel/attribute"
 	"go.opentelemetry.io/otel/metric"
 
-	"go.opentelemetry.io/collector/config/configtelemetry"
-	"go.opentelemetry.io/collector/internal/obsreportconfig/obsmetrics"
-	"go.opentelemetry.io/collector/obsreport"
-	"go.opentelemetry.io/collector/processor"
+	"github.com/thousandeyes/opentelemetry-collector/config/configtelemetry"
+	"github.com/thousandeyes/opentelemetry-collector/internal/obsreportconfig/obsmetrics"
+	"github.com/thousandeyes/opentelemetry-collector/obsreport"
+	"github.com/thousandeyes/opentelemetry-collector/processor"
 )
 
 const (
-	scopeName = "go.opentelemetry.io/collector/processor/batchprocessor"
+	scopeName = "github.com/thousandeyes/opentelemetry-collector/processor/batchprocessor"
 )
 
 var (

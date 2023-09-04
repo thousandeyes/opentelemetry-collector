@@ -1,14 +1,14 @@
 // Copyright The OpenTelemetry Authors
 // SPDX-License-Identifier: Apache-2.0
 
-package ballastextension // import "go.opentelemetry.io/collector/extension/ballastextension"
+package ballastextension // import "github.com/thousandeyes/opentelemetry-collector/extension/ballastextension"
 
 import (
 	"context"
 
-	"go.opentelemetry.io/collector/component"
-	"go.opentelemetry.io/collector/extension"
-	"go.opentelemetry.io/collector/internal/iruntime"
+	"github.com/thousandeyes/opentelemetry-collector/component"
+	"github.com/thousandeyes/opentelemetry-collector/extension"
+	"github.com/thousandeyes/opentelemetry-collector/internal/iruntime"
 )
 
 const (

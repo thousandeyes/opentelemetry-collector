@@ -2,4 +2,4 @@
 // SPDX-License-Identifier: Apache-2.0
 
 // Package otlpreceiver receives data in OTLP format.
-package otlpreceiver // import "go.opentelemetry.io/collector/receiver/otlpreceiver"
+package otlpreceiver // import "github.com/thousandeyes/opentelemetry-collector/receiver/otlpreceiver"

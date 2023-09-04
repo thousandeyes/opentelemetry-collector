@@ -1,7 +1,7 @@
 // Copyright The OpenTelemetry Authors
 // SPDX-License-Identifier: Apache-2.0
 
-package pcommon // import "go.opentelemetry.io/collector/pdata/pcommon"
+package pcommon // import "github.com/thousandeyes/opentelemetry-collector/pdata/pcommon"
 
 import (
 	"encoding/base64"
@@ -10,8 +10,8 @@ import (
 	"math"
 	"strconv"
 
-	"go.opentelemetry.io/collector/pdata/internal"
-	otlpcommon "go.opentelemetry.io/collector/pdata/internal/data/protogen/common/v1"
+	"github.com/thousandeyes/opentelemetry-collector/pdata/internal"
+	otlpcommon "github.com/thousandeyes/opentelemetry-collector/pdata/internal/data/protogen/common/v1"
 )
 
 // ValueType specifies the type of Value.

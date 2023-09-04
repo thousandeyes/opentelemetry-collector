@@ -1,7 +1,7 @@
 // Copyright The OpenTelemetry Authors
 // SPDX-License-Identifier: Apache-2.0
 
-package scraperhelper // import "go.opentelemetry.io/collector/receiver/scraperhelper"
+package scraperhelper // import "github.com/thousandeyes/opentelemetry-collector/receiver/scraperhelper"
 
 import (
 	"errors"
@@ -10,7 +10,7 @@ import (
 
 	"go.uber.org/multierr"
 
-	"go.opentelemetry.io/collector/component"
+	"github.com/thousandeyes/opentelemetry-collector/component"
 )
 
 var (

@@ -1,14 +1,14 @@
 // Copyright The OpenTelemetry Authors
 // SPDX-License-Identifier: Apache-2.0
 
-package configunmarshaler // import "go.opentelemetry.io/collector/otelcol/internal/configunmarshaler"
+package configunmarshaler // import "github.com/thousandeyes/opentelemetry-collector/otelcol/internal/configunmarshaler"
 
 import (
 	"fmt"
 	"reflect"
 
-	"go.opentelemetry.io/collector/component"
-	"go.opentelemetry.io/collector/confmap"
+	"github.com/thousandeyes/opentelemetry-collector/component"
+	"github.com/thousandeyes/opentelemetry-collector/confmap"
 )
 
 type Configs[F component.Factory] struct {

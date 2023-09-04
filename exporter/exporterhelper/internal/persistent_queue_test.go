@@ -15,11 +15,11 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"go.opentelemetry.io/collector/component"
-	"go.opentelemetry.io/collector/extension/experimental/storage"
-	"go.opentelemetry.io/collector/extension/extensiontest"
-	"go.opentelemetry.io/collector/pdata/pcommon"
-	"go.opentelemetry.io/collector/pdata/ptrace"
+	"github.com/thousandeyes/opentelemetry-collector/component"
+	"github.com/thousandeyes/opentelemetry-collector/extension/experimental/storage"
+	"github.com/thousandeyes/opentelemetry-collector/extension/extensiontest"
+	"github.com/thousandeyes/opentelemetry-collector/pdata/pcommon"
+	"github.com/thousandeyes/opentelemetry-collector/pdata/ptrace"
 )
 
 type mockHost struct {

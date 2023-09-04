@@ -84,7 +84,7 @@ linters-settings:
   goimports:
     # put imports beginning with prefix after 3rd-party packages;
     # it's a comma-separated list of prefixes
-    local-prefixes: go.opentelemetry.io/collector
+    local-prefixes: github.com/thousandeyes/opentelemetry-collector
 
   misspell:
     # Correct spellings using locale preferences for US or UK.
@@ -113,7 +113,7 @@ linters-settings:
       ignore-in-test:
           deny:
           - pkg: go.opentelemetry.io/proto
-            desc: "Use go.opentelemetry.io/collector/pdata instead"
+            desc: "Use github.com/thousandeyes/opentelemetry-collector/pdata instead"
             # Allow in tests for testing pdata or other receivers/exporters that expect OTLP.
           files:
             - "!**/*_test.go"

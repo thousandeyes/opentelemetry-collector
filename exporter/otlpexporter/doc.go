@@ -2,4 +2,4 @@
 // SPDX-License-Identifier: Apache-2.0
 
 // Package otlpexporter exports data by using the OTLP format to a gPRC endpoint.
-package otlpexporter // import "go.opentelemetry.io/collector/exporter/otlpexporter"
+package otlpexporter // import "github.com/thousandeyes/opentelemetry-collector/exporter/otlpexporter"

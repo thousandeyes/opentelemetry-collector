@@ -1,16 +1,16 @@
 // Copyright The OpenTelemetry Authors
 // SPDX-License-Identifier: Apache-2.0
 
-package obsreportconfig // import "go.opentelemetry.io/collector/internal/obsreportconfig"
+package obsreportconfig // import "github.com/thousandeyes/opentelemetry-collector/internal/obsreportconfig"
 
 import (
 	"go.opencensus.io/stats"
 	"go.opencensus.io/stats/view"
 	"go.opencensus.io/tag"
 
-	"go.opentelemetry.io/collector/config/configtelemetry"
-	"go.opentelemetry.io/collector/featuregate"
-	"go.opentelemetry.io/collector/internal/obsreportconfig/obsmetrics"
+	"github.com/thousandeyes/opentelemetry-collector/config/configtelemetry"
+	"github.com/thousandeyes/opentelemetry-collector/featuregate"
+	"github.com/thousandeyes/opentelemetry-collector/internal/obsreportconfig/obsmetrics"
 )
 
 // UseOtelForInternalMetricsfeatureGate is the feature gate that controls whether the collector uses open

@@ -1,7 +1,7 @@
 // Copyright The OpenTelemetry Authors
 // SPDX-License-Identifier: Apache-2.0
 
-package confignet // import "go.opentelemetry.io/collector/config/confignet"
+package confignet // import "github.com/thousandeyes/opentelemetry-collector/config/confignet"
 
 import (
 	"net"

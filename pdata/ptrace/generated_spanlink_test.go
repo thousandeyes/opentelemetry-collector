@@ -11,9 +11,9 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"go.opentelemetry.io/collector/pdata/internal"
-	"go.opentelemetry.io/collector/pdata/internal/data"
-	"go.opentelemetry.io/collector/pdata/pcommon"
+	"github.com/thousandeyes/opentelemetry-collector/pdata/internal"
+	"github.com/thousandeyes/opentelemetry-collector/pdata/internal/data"
+	"github.com/thousandeyes/opentelemetry-collector/pdata/pcommon"
 )
 
 func TestSpanLink_MoveTo(t *testing.T) {

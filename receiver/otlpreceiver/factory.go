@@ -1,18 +1,18 @@
 // Copyright The OpenTelemetry Authors
 // SPDX-License-Identifier: Apache-2.0
 
-package otlpreceiver // import "go.opentelemetry.io/collector/receiver/otlpreceiver"
+package otlpreceiver // import "github.com/thousandeyes/opentelemetry-collector/receiver/otlpreceiver"
 
 import (
 	"context"
 
-	"go.opentelemetry.io/collector/component"
-	"go.opentelemetry.io/collector/config/configgrpc"
-	"go.opentelemetry.io/collector/config/confighttp"
-	"go.opentelemetry.io/collector/config/confignet"
-	"go.opentelemetry.io/collector/consumer"
-	"go.opentelemetry.io/collector/internal/sharedcomponent"
-	"go.opentelemetry.io/collector/receiver"
+	"github.com/thousandeyes/opentelemetry-collector/component"
+	"github.com/thousandeyes/opentelemetry-collector/config/configgrpc"
+	"github.com/thousandeyes/opentelemetry-collector/config/confighttp"
+	"github.com/thousandeyes/opentelemetry-collector/config/confignet"
+	"github.com/thousandeyes/opentelemetry-collector/consumer"
+	"github.com/thousandeyes/opentelemetry-collector/internal/sharedcomponent"
+	"github.com/thousandeyes/opentelemetry-collector/receiver"
 )
 
 const (

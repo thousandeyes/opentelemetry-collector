@@ -8,8 +8,8 @@ package internal // import "github.com/thousandeyes/opentelemetry-collector/expo
 import (
 	"context"
 
+	"github.com/thousandeyes/opentelemetry-collector/component"
 	"github.com/thousandeyes/opentelemetry-collector/exporter"
-	"go.opentelemetry.io/collector/component"
 )
 
 type QueueSettings struct {

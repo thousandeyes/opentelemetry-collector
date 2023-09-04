@@ -7,7 +7,7 @@
 package ptrace
 
 import (
-	otlptrace "go.opentelemetry.io/collector/pdata/internal/data/protogen/trace/v1"
+	otlptrace "github.com/thousandeyes/opentelemetry-collector/pdata/internal/data/protogen/trace/v1"
 )
 
 // Status is an optional final status for this span. Semantically, when Status was not

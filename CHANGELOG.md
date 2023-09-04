@@ -7,7 +7,7 @@ If you are looking for developer-facing changes, check out [CHANGELOG-API.md](./
 
 <!-- next version -->
 
-## v0.84.0
+## v0.0.0-20230904160414-bb0c230d9653
 
 ### 💡 Enhancements 💡
 
@@ -465,7 +465,7 @@ and hope to make a v1.0.0 release soon.
 - `component`: Remove `Validate()` from component.*Config interfaces and make it optional interface (#6544)
 - `confmap`: Splitting confmap into its own module (#6185)
   The import path for the confmap module can now be access directly:
-  - `go.opentelemetry.io/collector/confmap`
+  - `github.com/thousandeyes/opentelemetry-collector/confmap`
 
 ### 🚩 Deprecations 🚩
 
@@ -619,13 +619,13 @@ and hope to make a v1.0.0 release soon.
 - `service/collector`: Support SIGHUP configuration reloading (#5966)
 - `component`: Split component into its own package (#6187)
   The import path for the component module can now be access directly:
-    - `go.opentelemetry.io/collector/component`
+    - `github.com/thousandeyes/opentelemetry-collector/component`
 - `consumer`: Split consumer into its own package (#6186)
   The import path for the consumer module can now be accessed directly:
-    - `go.opentelemetry.io/collector/consumer`
+    - `github.com/thousandeyes/opentelemetry-collector/consumer`
 - `featuregate`: Split featuregate into its own package (#6526)
   The import path for the featuregate module can now be accessed directly:
-    - `go.opentelemetry.io/collector/featuregate`
+    - `github.com/thousandeyes/opentelemetry-collector/featuregate`
 
 ### 🧰 Bug fixes 🧰
 
@@ -657,24 +657,24 @@ and hope to make a v1.0.0 release soon.
 
 - `extension`: Splitting ballast/zpages extension into their own modules (#6191)
   The import path for the extension modules can now be accessed directly:
-  - `go.opentelemetry.io/collector/extension/ballastextension`
-  - `go.opentelemetry.io/collector/extension/zpagesextension`
+  - `github.com/thousandeyes/opentelemetry-collector/extension/ballastextension`
+  - `github.com/thousandeyes/opentelemetry-collector/extension/zpagesextension`
 
   If using one of these extensions, modify your Collector builder configuration to use `gomod` directly, such as:
-  - `gomod: go.opentelemetry.io/collector/extension/ballastextension v0.64.0`
+  - `gomod: github.com/thousandeyes/opentelemetry-collector/extension/ballastextension v0.64.0`
 - `processor`: Splitting batch/memorylimiter processors into their own modules (#6188, #6192, #6193)
   The import path for the processor modules can now be access directly:
-  - `go.opentelemetry.io/collector/processor/batchprocessor`
-  - `go.opentelemetry.io/collector/processor/memorylimiter`
+  - `github.com/thousandeyes/opentelemetry-collector/processor/batchprocessor`
+  - `github.com/thousandeyes/opentelemetry-collector/processor/memorylimiter`
 
   If using this processor, modify your Collector builder configuration to use `gomod` directly, such as:
-  - `gomod: go.opentelemetry.io/collector/processor/batchprocessor v0.64.0`
+  - `gomod: github.com/thousandeyes/opentelemetry-collector/processor/batchprocessor v0.64.0`
 - `otlpreceiver`: Splitting otlp receiver into its own module (#6190)
   The import path for the OTLP receiver can now be access directly:
-  - `go.opentelemetry.io/collector/receiver/otlpreceiver`
+  - `github.com/thousandeyes/opentelemetry-collector/receiver/otlpreceiver`
 
   If using this receiver, modify your Collector builder configuration to use `gomod` directly, such as:
-  - `gomod: go.opentelemetry.io/collector/receiver/otlpreceiver v0.64.0`
+  - `gomod: github.com/thousandeyes/opentelemetry-collector/receiver/otlpreceiver v0.64.0`
 
 - `confmap`: Remove unused public member `sync.Mutex` from `confmap.Resolver`. (#6489)
   This is an exception from the deprecation rule since this is not used anywhere and it is very unlikely that is used by external users.
@@ -750,12 +750,12 @@ and hope to make a v1.0.0 release soon.
 
 - `exporter`: Splitting otlp, otlphttp and logging exporters into their own modules (#6343)
   The import path for these exporters can now be access directly:
-  - `go.opentelemetry.io/collector/exporter/loggingexporter`
-  - `go.opentelemetry.io/collector/exporter/otlpexporter`
-  - `go.opentelemetry.io/collector/exporter/otlphttpexporter`
+  - `github.com/thousandeyes/opentelemetry-collector/exporter/loggingexporter`
+  - `github.com/thousandeyes/opentelemetry-collector/exporter/otlpexporter`
+  - `github.com/thousandeyes/opentelemetry-collector/exporter/otlphttpexporter`
 
   If using these exporters, modify your Collector builder configuration to use `gomod` directly, such as:
-  - `gomod: go.opentelemetry.io/collector/exporter/otlpexporter v0.63.0`
+  - `gomod: github.com/thousandeyes/opentelemetry-collector/exporter/otlpexporter v0.63.0`
 
 ### 🚩 Deprecations 🚩
 
@@ -793,7 +793,7 @@ and hope to make a v1.0.0 release soon.
 
 ### 🛑 Breaking changes 🛑
 
-- Delete deprecated `go.opentelemetry.io/collector/service/featuregate`. (#6178)
+- Delete deprecated `github.com/thousandeyes/opentelemetry-collector/service/featuregate`. (#6178)
 - Delete deprecated `pmetric.OptionalType`. (#6178)
 - Delete deprecated `ptrace.Span[Link]?.TraceStateStruct`. (#6178)
 - Delete deprecated `pcommon.NewValueBytesEmpty`. (#6178)
@@ -876,7 +876,7 @@ and hope to make a v1.0.0 release soon.
 
 ### 🚩 Deprecations 🚩
 
-- Deprecate `go.opentelemetry.io/collector/service/featuregate` in favor of `go.opentelemetry.io/collector/featuregate`. (#6094)
+- Deprecate `github.com/thousandeyes/opentelemetry-collector/service/featuregate` in favor of `github.com/thousandeyes/opentelemetry-collector/featuregate`. (#6094)
 - Deprecate `pmetric.OptionalType`, unused enum type. (#6096)
 - Deprecate `ptrace.Span[Link]?.TraceStateStruct` in favor of `ptrace.Span[Link]?.TraceState` (#6085)
 - Deprecate `pcommon.NewValueBytesEmpty` in favor of `pcommon.NewValueBytes` that now has the same signature. (#6105)
@@ -2035,7 +2035,7 @@ This release is marked as "bad" since the metrics pipelines will produce bad dat
 - Create http Server via Config, enable cors and decompression (#3513)
 - Allow users to set min and max TLS versions (#3591)
 - Support setting ballast size in percentage of total Mem in ballast extension (#3456)
-- Publish go.opentelemetry.io/collector/model as a separate module (#3530)
+- Publish github.com/thousandeyes/opentelemetry-collector/model as a separate module (#3530)
 - Pass a TracerProvider via construct settings to all the components (#3592)
 - Make graceful shutdown optional (#3577)
 
@@ -2870,7 +2870,7 @@ Released 2020-06-16
   - Add context to `Start` and `Stop` methods in the component (#790)
   - Rename `AttributeValue` and `AttributeMap` method names (#781)
     (other breaking changes in the internal trace data types)
-  - Change entire repo to use the new vanityurl go.opentelemetry.io/collector (#977)
+  - Change entire repo to use the new vanityurl github.com/thousandeyes/opentelemetry-collector (#977)
 
 ### 🚀 New components 🚀
 

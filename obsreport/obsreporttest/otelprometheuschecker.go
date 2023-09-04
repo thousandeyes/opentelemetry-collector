@@ -1,7 +1,7 @@
 // Copyright The OpenTelemetry Authors
 // SPDX-License-Identifier: Apache-2.0
 
-package obsreporttest // import "go.opentelemetry.io/collector/obsreport/obsreporttest"
+package obsreporttest // import "github.com/thousandeyes/opentelemetry-collector/obsreport/obsreporttest"
 
 import (
 	"fmt"
@@ -15,7 +15,7 @@ import (
 	"go.opentelemetry.io/otel/attribute"
 	"go.uber.org/multierr"
 
-	"go.opentelemetry.io/collector/component"
+	"github.com/thousandeyes/opentelemetry-collector/component"
 )
 
 // prometheusChecker is used to assert exported metrics from a prometheus handler.

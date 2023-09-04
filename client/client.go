@@ -75,7 +75,7 @@
 //	      receivers: [otlp]
 //	      processors: [authprinter]
 //	      exporters: [logging]
-package client // import "go.opentelemetry.io/collector/client"
+package client // import "github.com/thousandeyes/opentelemetry-collector/client"
 
 import (
 	"context"

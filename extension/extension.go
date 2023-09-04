@@ -1,14 +1,14 @@
 // Copyright The OpenTelemetry Authors
 // SPDX-License-Identifier: Apache-2.0
 
-package extension // import "go.opentelemetry.io/collector/extension"
+package extension // import "github.com/thousandeyes/opentelemetry-collector/extension"
 
 import (
 	"context"
 	"fmt"
 
-	"go.opentelemetry.io/collector/component"
-	"go.opentelemetry.io/collector/confmap"
+	"github.com/thousandeyes/opentelemetry-collector/component"
+	"github.com/thousandeyes/opentelemetry-collector/confmap"
 )
 
 // Extension is the interface for objects hosted by the OpenTelemetry Collector that
