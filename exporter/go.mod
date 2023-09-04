@@ -1,4 +1,4 @@
-module go.opentelemetry.io/collector/exporter
+module github.com/thousandeyes/opentelemetry-collector/exporter
 
 go 1.20
 
@@ -7,7 +7,7 @@ require (
 	github.com/stretchr/testify v1.8.4
 	go.opencensus.io v0.24.0
 	go.opentelemetry.io/collector v0.84.0
-	go.opentelemetry.io/collector/component v0.84.0
+	github.com/thousandeyes/opentelemetry-collector/component v0.84.0
 	go.opentelemetry.io/collector/consumer v0.84.0
 	go.opentelemetry.io/collector/extension v0.84.0
 	go.opentelemetry.io/collector/pdata v1.0.0-rcv0014

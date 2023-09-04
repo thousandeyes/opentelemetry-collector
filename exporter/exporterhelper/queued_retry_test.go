@@ -18,10 +18,10 @@ import (
 	"go.opencensus.io/metric/metricproducer"
 	"go.opencensus.io/tag"
 
+	"github.com/thousandeyes/opentelemetry-collector/exporter/exporterhelper/internal"
 	"go.opentelemetry.io/collector/component"
 	"go.opentelemetry.io/collector/component/componenttest"
 	"go.opentelemetry.io/collector/consumer/consumererror"
-	"go.opentelemetry.io/collector/exporter/exporterhelper/internal"
 	"go.opentelemetry.io/collector/exporter/exportertest"
 	"go.opentelemetry.io/collector/extension/experimental/storage"
 	"go.opentelemetry.io/collector/internal/testdata"

@@ -1,7 +1,7 @@
 // Copyright The OpenTelemetry Authors
 // SPDX-License-Identifier: Apache-2.0
 
-package exporter // import "go.opentelemetry.io/collector/exporter"
+package exporter // import "github.com/thousandeyes/opentelemetry-collector/exporter"
 
 import (
 	"context"

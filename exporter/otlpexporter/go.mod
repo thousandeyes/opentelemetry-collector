@@ -1,11 +1,11 @@
-module go.opentelemetry.io/collector/exporter/otlpexporter
+module github.com/thousandeyes/opentelemetry-collector/exporter/otlpexporter
 
 go 1.20
 
 require (
 	github.com/stretchr/testify v1.8.4
-	go.opentelemetry.io/collector v0.84.0
-	go.opentelemetry.io/collector/component v0.84.0
+	github.com/thousandeyes/opentelemetry-collector/collector v0.84.0
+	github.com/thousandeyes/opentelemetry-collector/component v0.84.0
 	go.opentelemetry.io/collector/config/configauth v0.84.0
 	go.opentelemetry.io/collector/config/configcompression v0.84.0
 	go.opentelemetry.io/collector/config/configgrpc v0.84.0
@@ -13,7 +13,7 @@ require (
 	go.opentelemetry.io/collector/config/configtls v0.84.0
 	go.opentelemetry.io/collector/confmap v0.84.0
 	go.opentelemetry.io/collector/consumer v0.84.0
-	go.opentelemetry.io/collector/exporter v0.84.0
+	github.com/thousandeyes/opentelemetry-collector/exporter v0.84.0
 	go.opentelemetry.io/collector/pdata v1.0.0-rcv0014
 	google.golang.org/genproto/googleapis/rpc v0.0.0-20230530153820-e85fd2cbaebc
 	google.golang.org/grpc v1.57.0

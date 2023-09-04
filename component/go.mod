@@ -1,4 +1,4 @@
-module go.opentelemetry.io/collector/component
+module github.com/thousandeyes/opentelemetry-collector/component
 
 go 1.20
 

@@ -1,12 +1,12 @@
 // Copyright The OpenTelemetry Authors
 // SPDX-License-Identifier: Apache-2.0
 
-package exporterhelper // import "go.opentelemetry.io/collector/exporter/exporterhelper"
+package exporterhelper // import "github.com/thousandeyes/opentelemetry-collector/exporter/exporterhelper"
 
 import (
 	"context"
 
-	"go.opentelemetry.io/collector/exporter/exporterhelper/internal"
+	"github.com/thousandeyes/opentelemetry-collector/exporter/exporterhelper/internal"
 )
 
 // Request represents a single request that can be sent to an external endpoint.

@@ -3,13 +3,13 @@
 // Copyright (c) 2017 Uber Technologies, Inc.
 // SPDX-License-Identifier: Apache-2.0
 
-package internal // import "go.opentelemetry.io/collector/exporter/exporterhelper/internal"
+package internal // import "github.com/thousandeyes/opentelemetry-collector/exporter/exporterhelper/internal"
 
 import (
 	"context"
 
+	"github.com/thousandeyes/opentelemetry-collector/exporter"
 	"go.opentelemetry.io/collector/component"
-	"go.opentelemetry.io/collector/exporter"
 )
 
 type QueueSettings struct {

@@ -6,9 +6,9 @@ package otlphttpexporter // import "go.opentelemetry.io/collector/exporter/otlph
 import (
 	"errors"
 
+	"github.com/thousandeyes/opentelemetry-collector/exporter/exporterhelper"
 	"go.opentelemetry.io/collector/component"
 	"go.opentelemetry.io/collector/config/confighttp"
-	"go.opentelemetry.io/collector/exporter/exporterhelper"
 )
 
 // Config defines configuration for OTLP/HTTP exporter.

@@ -1,18 +1,18 @@
-module go.opentelemetry.io/collector/exporter/otlphttpexporter
+module github.com/thousandeyes/opentelemetry-collector/exporter/otlphttpexporter
 
 go 1.20
 
 require (
 	github.com/stretchr/testify v1.8.4
-	go.opentelemetry.io/collector v0.84.0
-	go.opentelemetry.io/collector/component v0.84.0
+	github.com/thousandeyes/opentelemetry-collector/collector v0.84.0
+	github.com/thousandeyes/opentelemetry-collector/component v0.0.0-20230904135538-a1388b18d8d2
 	go.opentelemetry.io/collector/config/configcompression v0.84.0
 	go.opentelemetry.io/collector/config/confighttp v0.84.0
 	go.opentelemetry.io/collector/config/configopaque v0.84.0
 	go.opentelemetry.io/collector/config/configtls v0.84.0
 	go.opentelemetry.io/collector/confmap v0.84.0
 	go.opentelemetry.io/collector/consumer v0.84.0
-	go.opentelemetry.io/collector/exporter v0.84.0
+	github.com/thousandeyes/opentelemetry-collector/exporter v0.0.0-20230904135538-a1388b18d8d2
 	go.opentelemetry.io/collector/pdata v1.0.0-rcv0014
 	go.opentelemetry.io/collector/receiver v0.84.0
 	go.opentelemetry.io/collector/receiver/otlpreceiver v0.84.0
