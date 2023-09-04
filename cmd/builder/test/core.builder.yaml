@@ -4,17 +4,17 @@ dist:
 
 extensions:
   - import: github.com/thousandeyes/opentelemetry-collector/extension/zpagesextension
-    gomod: github.com/thousandeyes/opentelemetry-collector v0.0.0-20230904160414-bb0c230d9653
+    gomod: github.com/thousandeyes/opentelemetry-collector v0.0.0-20230904162551-7a8e3a837a30
     path: ${WORKSPACE_DIR}
 
 receivers:
   - import: github.com/thousandeyes/opentelemetry-collector/receiver/otlpreceiver
-    gomod: github.com/thousandeyes/opentelemetry-collector v0.0.0-20230904160414-bb0c230d9653
+    gomod: github.com/thousandeyes/opentelemetry-collector v0.0.0-20230904162551-7a8e3a837a30
     path: ${WORKSPACE_DIR}
 
 exporters:
   - import: github.com/thousandeyes/opentelemetry-collector/exporter/loggingexporter
-    gomod: github.com/thousandeyes/opentelemetry-collector v0.0.0-20230904160414-bb0c230d9653
+    gomod: github.com/thousandeyes/opentelemetry-collector v0.0.0-20230904162551-7a8e3a837a30
     path: ${WORKSPACE_DIR}
 
 replaces:

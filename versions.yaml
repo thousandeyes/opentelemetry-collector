@@ -8,7 +8,7 @@ module-sets:
       - github.com/thousandeyes/opentelemetry-collector/featuregate
       - github.com/thousandeyes/opentelemetry-collector/pdata
   beta:
-    version: v0.0.0-20230904160414-bb0c230d9653
+    version: v0.0.0-20230904162551-7a8e3a837a30
     modules:
       - github.com/thousandeyes/opentelemetry-collector
       - github.com/thousandeyes/opentelemetry-collector/cmd/builder

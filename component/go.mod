@@ -4,8 +4,8 @@ go 1.20
 
 require (
 	github.com/stretchr/testify v1.8.4
-	github.com/thousandeyes/opentelemetry-collector/config/configtelemetry v0.0.0-20230904160414-bb0c230d9653
-	github.com/thousandeyes/opentelemetry-collector/confmap v0.0.0-20230904160414-bb0c230d9653
+	github.com/thousandeyes/opentelemetry-collector/config/configtelemetry v0.0.0-20230904162551-7a8e3a837a30
+	github.com/thousandeyes/opentelemetry-collector/confmap v0.0.0-20230904162551-7a8e3a837a30
 	github.com/thousandeyes/opentelemetry-collector/pdata v1.0.0-rcv0014
 	go.opentelemetry.io/otel/metric v1.16.0
 	go.opentelemetry.io/otel/trace v1.16.0

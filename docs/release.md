@@ -151,4 +151,4 @@ The following documents the procedure to release a bugfix
 | 2023-10-23 | v0.88.0 | @mx-psi         |
 | 2023-11-06 | v0.89.0 | @jpkrohling     |
 | 2023-11-20 | v0.90.0 | @djaglowski     |
-| 2023-12-04 | v0.0.0-20230904160414-bb0c230d9653 | @dmitryax       |
+| 2023-12-04 | v0.0.0-20230904162551-7a8e3a837a30 | @dmitryax       |

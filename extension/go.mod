@@ -4,8 +4,8 @@ go 1.20
 
 require (
 	github.com/stretchr/testify v1.8.4
-	github.com/thousandeyes/opentelemetry-collector/component v0.0.0-20230904160414-bb0c230d9653
-	github.com/thousandeyes/opentelemetry-collector/confmap v0.0.0-20230904160414-bb0c230d9653
+	github.com/thousandeyes/opentelemetry-collector/component v0.0.0-20230904162551-7a8e3a837a30
+	github.com/thousandeyes/opentelemetry-collector/confmap v0.0.0-20230904162551-7a8e3a837a30
 )
 
 require (
@@ -19,7 +19,7 @@ require (
 	github.com/mitchellh/mapstructure v1.5.1-0.20220423185008-bf980b35cac4 // indirect
 	github.com/mitchellh/reflectwalk v1.0.2 // indirect
 	github.com/pmezard/go-difflib v1.0.0 // indirect
-	github.com/thousandeyes/opentelemetry-collector/config/configtelemetry v0.0.0-20230904160414-bb0c230d9653 // indirect
+	github.com/thousandeyes/opentelemetry-collector/config/configtelemetry v0.0.0-20230904162551-7a8e3a837a30 // indirect
 	github.com/thousandeyes/opentelemetry-collector/featuregate v1.0.0-rcv0014 // indirect
 	github.com/thousandeyes/opentelemetry-collector/pdata v1.0.0-rcv0014 // indirect
 	go.opentelemetry.io/otel v1.16.0 // indirect
