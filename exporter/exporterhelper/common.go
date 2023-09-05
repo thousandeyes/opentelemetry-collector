@@ -188,7 +188,7 @@ func newBaseExporter(set exporter.CreateSettings, bs *baseSettings, signal compo
 		}
 
 		// If no error then start the queuedRetrySender.
-		return be.qrSender.start(ctx, host, set)
+		return be.qrSender.start(ctx, host, newSet)
 	}
 	be.ShutdownFunc = func(ctx context.Context) error {
 		// First shutdown the queued retry sender
