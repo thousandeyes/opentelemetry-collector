@@ -92,7 +92,7 @@ func newLogger(cfg LogsConfig, options []zap.Option) (*zap.Logger, error) {
 
 func newSampledLogger(cfg *LogsSamplingConfig, logger *zap.Logger) *zap.Logger {
 	if cfg == nil {
-		cfg = NewDefaultLogsSamplingConfig()
+		cfg = newDefaultLogsSamplingConfig()
 	}
 
 	// Create a logger that samples all messages to "initial" per "tick" initially,
@@ -109,7 +109,7 @@ func newSampledLogger(cfg *LogsSamplingConfig, logger *zap.Logger) *zap.Logger {
 }
 
 // NewDefaultLogsSamplingConfig returns a default LogsSamplingConfig.
-func NewDefaultLogsSamplingConfig() *LogsSamplingConfig {
+func newDefaultLogsSamplingConfig() *LogsSamplingConfig {
 	return &LogsSamplingConfig{
 		Initial:    1,
 		Thereafter: 100,
