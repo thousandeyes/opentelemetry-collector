@@ -7,13 +7,13 @@ import (
 	"context"
 	"errors"
 
+	"github.com/thousandeyes/opentelemetry-collector/exporter"
+	"github.com/thousandeyes/opentelemetry-collector/exporter/exporterhelper/internal"
 	"go.uber.org/zap"
 
 	"go.opentelemetry.io/collector/component"
 	"go.opentelemetry.io/collector/consumer"
 	"go.opentelemetry.io/collector/consumer/consumererror"
-	"go.opentelemetry.io/collector/exporter"
-	"go.opentelemetry.io/collector/exporter/exporterhelper/internal"
 	"go.opentelemetry.io/collector/pdata/pmetric"
 )
 

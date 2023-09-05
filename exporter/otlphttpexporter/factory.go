@@ -10,18 +10,19 @@ import (
 	"strings"
 	"time"
 
+	"github.com/thousandeyes/opentelemetry-collector/exporter"
+	"github.com/thousandeyes/opentelemetry-collector/exporter/exporterhelper"
+
 	"go.opentelemetry.io/collector/component"
 	"go.opentelemetry.io/collector/config/configcompression"
 	"go.opentelemetry.io/collector/config/confighttp"
 	"go.opentelemetry.io/collector/config/configopaque"
 	"go.opentelemetry.io/collector/consumer"
-	"go.opentelemetry.io/collector/exporter"
-	"go.opentelemetry.io/collector/exporter/exporterhelper"
 )
 
 const (
 	// The value of "type" key in configuration.
-	typeStr = "otlphttp"
+	typeStr = "otlphttp_lite"
 )
 
 // NewFactory creates a factory for OTLP exporter.

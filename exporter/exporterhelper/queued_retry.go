@@ -10,6 +10,7 @@ import (
 	"time"
 
 	"github.com/cenkalti/backoff/v4"
+	"github.com/thousandeyes/opentelemetry-collector/exporter/exporterhelper/internal"
 	"go.opencensus.io/metric/metricdata"
 	"go.opentelemetry.io/otel/attribute"
 	"go.opentelemetry.io/otel/trace"
@@ -19,13 +20,13 @@ import (
 	"go.opentelemetry.io/collector/component"
 	"go.opentelemetry.io/collector/consumer/consumererror"
 	"go.opentelemetry.io/collector/exporter"
-	"go.opentelemetry.io/collector/exporter/exporterhelper/internal"
 	"go.opentelemetry.io/collector/internal/obsreportconfig/obsmetrics"
 )
 
 const defaultQueueSize = 1000
 
 var errSendingQueueIsFull = errors.New("sending_queue is full")
+var sampledLogger *zap.Logger = nil
 
 // QueueSettings defines configuration for queueing batches before sending to the consumerSender.
 type QueueSettings struct {
@@ -223,17 +224,21 @@ func createSampledLogger(logger *zap.Logger) *zap.Logger {
 		return logger
 	}
 
-	// Create a logger that samples all messages to 1 per 10 seconds initially,
-	// and 1/100 of messages after that.
-	opts := zap.WrapCore(func(core zapcore.Core) zapcore.Core {
-		return zapcore.NewSamplerWithOptions(
-			core,
-			10*time.Second,
-			1,
-			100,
-		)
-	})
-	return logger.WithOptions(opts)
+	if sampledLogger == nil {
+		// Create a logger that samples all messages to 1 per 10 seconds initially,
+		// and 1/100 of messages after that.
+		opts := zap.WrapCore(func(core zapcore.Core) zapcore.Core {
+			return zapcore.NewSamplerWithOptions(
+				core,
+				10*time.Second,
+				1,
+				100,
+			)
+		})
+		sampledLogger = logger.WithOptions(opts)
+	}
+
+	return sampledLogger
 }
 
 // send implements the requestSender interface

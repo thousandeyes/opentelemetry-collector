@@ -1,4 +1,4 @@
-module go.opentelemetry.io/collector/exporter
+module github.com/thousandeyes/opentelemetry-collector/exporter
 
 go 1.20
 
@@ -9,6 +9,7 @@ require (
 	go.opentelemetry.io/collector v0.84.0
 	go.opentelemetry.io/collector/component v0.84.0
 	go.opentelemetry.io/collector/consumer v0.84.0
+	go.opentelemetry.io/collector/exporter v0.84.0
 	go.opentelemetry.io/collector/extension v0.84.0
 	go.opentelemetry.io/collector/pdata v1.0.0-rcv0014
 	go.opentelemetry.io/otel v1.16.0
