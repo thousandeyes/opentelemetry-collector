@@ -12,6 +12,7 @@ import (
 
 	"go.opentelemetry.io/collector/component"
 	"go.opentelemetry.io/collector/consumer"
+	origexp "go.opentelemetry.io/collector/exporter"
 	"go.opentelemetry.io/collector/obsreport"
 )
 
@@ -166,8 +167,14 @@ type baseExporter struct {
 func newBaseExporter(set exporter.CreateSettings, bs *baseSettings, signal component.DataType) (*baseExporter, error) {
 	be := &baseExporter{}
 
+	newSet := origexp.CreateSettings{
+		ID:                set.ID,
+		TelemetrySettings: set.TelemetrySettings,
+		BuildInfo:         set.BuildInfo,
+	}
+
 	var err error
-	be.obsrep, err = newObsExporter(obsreport.ExporterSettings{ExporterID: set.ID, ExporterCreateSettings: set}, globalInstruments)
+	be.obsrep, err = newObsExporter(obsreport.ExporterSettings{ExporterID: set.ID, ExporterCreateSettings: newSet}, globalInstruments)
 	if err != nil {
 		return nil, err
 	}
