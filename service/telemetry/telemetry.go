@@ -108,7 +108,7 @@ func newSampledLogger(cfg *LogsSamplingConfig, logger *zap.Logger) *zap.Logger {
 	return logger.WithOptions(opts)
 }
 
-// NewDefaultLogsSamplingConfig returns a default LogsSamplingConfig.
+// newDefaultLogsSamplingConfig returns a default LogsSamplingConfig.
 func newDefaultLogsSamplingConfig() *LogsSamplingConfig {
 	return &LogsSamplingConfig{
 		Initial:    1,
