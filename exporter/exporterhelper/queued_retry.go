@@ -20,7 +20,7 @@ import (
 	"go.opentelemetry.io/collector/component"
 	"go.opentelemetry.io/collector/consumer/consumererror"
 	"go.opentelemetry.io/collector/exporter"
-	"go.opentelemetry.io/collector/internal/obsreportconfig/obsmetrics"
+	//"go.opentelemetry.io/collector/internal/obsreportconfig/obsmetrics"
 )
 
 const defaultQueueSize = 1000
@@ -82,7 +82,7 @@ func newQueuedRetrySender(id component.ID, signal component.DataType, queue inte
 	rCfg RetrySettings, nextSender requestSender, logger *zap.Logger) *queuedRetrySender {
 	retryStopCh := make(chan struct{})
 	sampledLogger := createSampledLogger(logger)
-	traceAttr := attribute.String(obsmetrics.ExporterKey, id.String())
+	traceAttr := attribute.String(ExporterKey, id.String())
 
 	qrs := &queuedRetrySender{
 		fullName:       id.String(),

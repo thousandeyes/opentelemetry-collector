@@ -5,14 +5,15 @@ package exporterhelper // import "go.opentelemetry.io/collector/exporter/exporte
 
 import (
 	"context"
-
 	"go.opencensus.io/metric"
 	"go.opencensus.io/metric/metricdata"
 	"go.opencensus.io/metric/metricproducer"
 
-	"go.opentelemetry.io/collector/internal/obsreportconfig/obsmetrics"
+	//"go.opentelemetry.io/collector/internal/obsreportconfig/obsmetrics"
 	"go.opentelemetry.io/collector/obsreport"
 )
+
+const ExporterKey = "exporter"
 
 // TODO: Incorporate this functionality along with tests from obsreport_test.go
 //       into existing `obsreport` package once its functionally is not exposed
@@ -40,33 +41,33 @@ func newInstruments(registry *metric.Registry) *instruments {
 		registry: registry,
 	}
 	insts.queueSize, _ = registry.AddInt64DerivedGauge(
-		obsmetrics.ExporterKey+"/queue_size",
+		ExporterKey+"/queue_size",
 		metric.WithDescription("Current size of the retry queue (in batches)"),
-		metric.WithLabelKeys(obsmetrics.ExporterKey),
+		metric.WithLabelKeys(ExporterKey),
 		metric.WithUnit(metricdata.UnitDimensionless))
 
 	insts.queueCapacity, _ = registry.AddInt64DerivedGauge(
-		obsmetrics.ExporterKey+"/queue_capacity",
+		ExporterKey+"/queue_capacity",
 		metric.WithDescription("Fixed capacity of the retry queue (in batches)"),
-		metric.WithLabelKeys(obsmetrics.ExporterKey),
+		metric.WithLabelKeys(ExporterKey),
 		metric.WithUnit(metricdata.UnitDimensionless))
 
 	insts.failedToEnqueueTraceSpans, _ = registry.AddInt64Cumulative(
-		obsmetrics.ExporterKey+"/enqueue_failed_spans",
+		ExporterKey+"/enqueue_failed_spans",
 		metric.WithDescription("Number of spans failed to be added to the sending queue."),
-		metric.WithLabelKeys(obsmetrics.ExporterKey),
+		metric.WithLabelKeys(ExporterKey),
 		metric.WithUnit(metricdata.UnitDimensionless))
 
 	insts.failedToEnqueueMetricPoints, _ = registry.AddInt64Cumulative(
-		obsmetrics.ExporterKey+"/enqueue_failed_metric_points",
+		ExporterKey+"/enqueue_failed_metric_points",
 		metric.WithDescription("Number of metric points failed to be added to the sending queue."),
-		metric.WithLabelKeys(obsmetrics.ExporterKey),
+		metric.WithLabelKeys(ExporterKey),
 		metric.WithUnit(metricdata.UnitDimensionless))
 
 	insts.failedToEnqueueLogRecords, _ = registry.AddInt64Cumulative(
-		obsmetrics.ExporterKey+"/enqueue_failed_log_records",
+		ExporterKey+"/enqueue_failed_log_records",
 		metric.WithDescription("Number of log records failed to be added to the sending queue."),
-		metric.WithLabelKeys(obsmetrics.ExporterKey),
+		metric.WithLabelKeys(ExporterKey),
 		metric.WithUnit(metricdata.UnitDimensionless))
 
 	return insts

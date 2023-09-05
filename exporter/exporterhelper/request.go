@@ -6,7 +6,7 @@ package exporterhelper // import "go.opentelemetry.io/collector/exporter/exporte
 import (
 	"context"
 
-	"go.opentelemetry.io/collector/exporter/exporterhelper/internal"
+	"github.com/thousandeyes/opentelemetry-collector/exporter/exporterhelper/internal"
 )
 
 // Request represents a single request that can be sent to an external endpoint.
