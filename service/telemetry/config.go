@@ -58,8 +58,8 @@ type LogsConfig struct {
 	// Sampling sets a sampling policy for the extra sampled logger.
 	// Default:
 	//     initial: 1
-	// 	   thereafter: 100
-	// 	   tick: 10s
+	//     thereafter: 100
+	//     tick: 10s
 	Sampling *LogsSamplingConfig `mapstructure:"sampling"`
 
 	// OutputPaths is a list of URLs or file paths to write logging output to.
