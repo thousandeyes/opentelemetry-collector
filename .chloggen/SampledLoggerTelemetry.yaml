@@ -7,7 +7,7 @@ change_type: enhancement
 component: service/telemetry exporter/exporterhelper
 
 # A brief description of the change.  Surround your text with quotes ("") if it needs to start with a backtick (`).
-note: "New sampled logger in the telemetry configuration to avoid flooding the logs with messages that are repeated frequently."
+note: "New sampled logger in the telemetry configuration used to avoid flooding the logs with messages that are repeated frequently."
 
 # One or more tracking issues or pull requests related to the change
 issues: [8134]
